@@ -1,0 +1,82 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Eliminar Correo";
+
+    Clientes Cli = new Clientes();
+    String Informacion = "";
+
+    String IdCorreo = "";
+    String IdCliente = "";
+    String Numero = "";
+
+    if (IsPost)
+    {
+        IdCorreo = Request.Form["IdCorreo"];
+        IdCliente = Request.Form["IdCliente"];
+        Numero = Request.Form["Numero"];
+        
+        if(Cli.BorrarCorreo(IdCorreo))
+        {
+            Response.Redirect("~/CorreosClientes?IdCliente=" + IdCliente + "&Numero=" + Numero);
+        }
+        else
+        {
+            Informacion = "Error pcurrido durante la operación";
+        }
+    }
+    else
+    {
+        IdCorreo = Request.QueryString["IdCorreo"];
+        IdCliente = Request.QueryString["IdCliente"];
+        Numero = Request.QueryString["Numero"];
+    }
+
+    String Nombre = Cli.NombreCorreo(IdCorreo);
+    
+}
+
+<div class="page-header"><h1>Configuración de Clientes  <small>Eliminar Correo</small></h1></div>
+
+<div class="row">
+    @if (Nombre == null)
+    {
+        <br />
+        <center style="color: red;">Error ocurrido al obtener información</center>
+    }
+    else
+    {
+        if (Nombre.Length == 0)
+        {
+            <br />
+            <center style="color: red;">Error ocurrido al obtener información</center>
+        }
+        else
+        {
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Confirmar</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" role="form" method="post">
+                            <center>¿Realmente deseas eliminar el correo @Nombre?</center>
+                            <br />
+                            <input type="hidden" name="IdCliente" value="@IdCliente" />
+                            <input type="hidden" name="IdCorreo" value="@IdCorreo" />
+                            <input type="hidden" name="Numero" value="@Numero" />
+                            <button class="btn btn-primary btn-lg center-block">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            if (Informacion.Length != 0)
+            {
+                <center style="color: red;">@Informacion</center>
+            }
+        }
+    }
+</div>

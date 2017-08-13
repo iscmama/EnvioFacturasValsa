@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="TLALNEPANTLA, ESTADO DE MEXICO" Moneda="USD" NumCtaPago="NO IDENTIFICADA" TipoCambio="17.75" certificado="MIIEkDCCA3igAwIBAgIUMDAwMDEwMDAwMDAyMDEzNDQzODcwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxMzIwNDAwN1oXDTE2MDYxMzIwNDAwN1owgdExIzAhBgNVBAMTGlNBTkRWSUsgREUgTUVYSUNPIFNBIERFIENWMSMwIQYDVQQpExpTQU5EVklLIERFIE1FWElDTyBTQSBERSBDVjEjMCEGA1UEChMaU0FORFZJSyBERSBNRVhJQ08gU0EgREUgQ1YxJTAjBgNVBC0THFNNRTYxMDMxN1RHNiAvIExFTEc3MjA4MjE3RTExHjAcBgNVBAUTFSAvIExFTEc3MjA4MjFITkVEUlMwMjEZMBcGA1UECxMQRVNUQURPIERFIE1FWElDTzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAstNRY9sxbP7qtyArGGNZaxtaVA13Mr9QMJEj5o1yEhCV8kZ+ZgqB8QnOxIdYnUx9UDPd3UBiWHN2qGY/MERv84Rhaqoh3GO6cnT4Eelsz/XowlOhPqVCx319PXGYZPIT5xEQ/tc6I+HerNGzY/TttR/3rnliPZKH/f3LRCuYDr0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAJJLlDYcaj22H+Ricte2F8rf2kTMD7MG2TZGgagoOEdEkOaFMfJizLoQlFGyESwMrtGAfBQQRH6yITkexxbApfYAy1ioN/wsb/KEZQt30VC/R8Zs4IhCF/845Fe/rcoBqoZRYdk+0Roe8gK8Rtph7g31TbKLRnUAUroMlI0beZaV7gm2cCgaAmeY/vMkGFF7GaG31t3f8fVzegqI54Hc35wjCB3jQPSIiBKD815bad18737dvl9OKuDCaWff5K1nNory717zQn9Co1VRd3rgNJhaqnxogdsMN9tUuQrbBa9R+aNbHIO2NGNTK8GmRXlpQo8t8cn4+2U/CwbDiKSr/RE=" condicionesDePago="COD" fecha="2016-03-18T16:12:55" folio="086869" formaDePago="Pago en una Sola Exhibici¢n" metodoDePago="TRANSFERENCIA" noCertificado="00001000000201344387" sello="DQe7t4Ozt06l21KKu9GeEacxAMc9Xz5m2EYz4oJMzdvAtrFkl2e4daJrf8RXom2wMoKmXLcTPWJIMza28FvFthkyuSwIJfANL6nrHINDQphTOuFzv5mZ8IGbswkrXWnoYZS3kb3uhIXYwuqPwcvNhUvabtWdjbMW80DWOR69kgg=" serie="P" subTotal="5796.16" tipoDeComprobante="ingreso" total="6723.55" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd">
+   <cfdi:Emisor nombre="SANDVIK DE MEXICO SA de CV" rfc="SME610317TG6">
+      <cfdi:DomicilioFiscal calle="VIA GUSTAVO BAZ" codigoPostal="54060" colonia="LA LOMA" estado="ESTADO DE MEXICO" localidad="MEXICO" municipio="TLALNEPANTLA" noExterior="352" pais="MEXICO"/>
+      <cfdi:RegimenFiscal Regimen="Regimen general de Ley"/>
+   </cfdi:Emisor>
+   <cfdi:Receptor nombre="AQUAQUIM SA DE CV" rfc="AQU740509847">
+      <cfdi:Domicilio calle="SEGUNDA SUR 4" codigoPostal="54900" colonia="COL INDEPENDENCIA" estado="TULTITLAN" pais="Mexico"/>
+   </cfdi:Receptor>
+   <cfdi:Conceptos>
+      <cfdi:Concepto cantidad="1.00" descripcion="VULCANIZADO DE GUIAS NI." importe="5796.16" noIdentificacion="SERVICIO-04" unidad="PZ" valorUnitario="5796.16"/>
+   </cfdi:Conceptos>
+   <cfdi:Impuestos totalImpuestosTrasladados="927.39">
+      <cfdi:Traslados>
+         <cfdi:Traslado importe="927.39" impuesto="IVA" tasa="16.00"/>
+      </cfdi:Traslados>
+   </cfdi:Impuestos>
+   <cfdi:Complemento>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2016-03-18T16:12:56" UUID="2A8954EE-0D4E-4E63-B32A-8D29BA3F58ED" noCertificadoSAT="00001000000203631919" selloCFD="DQe7t4Ozt06l21KKu9GeEacxAMc9Xz5m2EYz4oJMzdvAtrFkl2e4daJrf8RXom2wMoKmXLcTPWJIMza28FvFthkyuSwIJfANL6nrHINDQphTOuFzv5mZ8IGbswkrXWnoYZS3kb3uhIXYwuqPwcvNhUvabtWdjbMW80DWOR69kgg=" selloSAT="KC84TpWGqlo+rwn8dfwNrHdZy+tc1gODSPTUPVL7OZSkIghzdhGzJXZwrlTHtPTetrZWnlZAM73W8My2Kco0sWg2AKOXilKgFVVQhsIdFzbyVXJf4HyB3FfGcPCooNMxNdV9Drz+Kbz8EHOWl6vL4Du/HQYTWY0SXFqSgemqUTw=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+</cfdi:Complemento>
+<cfdi:Addenda>
+      <requestForPayment DeliveryDate="2016-03-18" contentVersion="1.3.1" documentStatus="ORIGINAL" documentStructureVersion="AMC7.1" type="SimpleInvoiceType">
+         <requestForPaymentIdentification>
+            <entityType>INVOICE</entityType>
+            <uniqueCreatorIdentification>P086869-160318161255</uniqueCreatorIdentification>
+         </requestForPaymentIdentification>
+         <specialInstruction code="AAB">
+            <text>COD</text>
+         </specialInstruction>
+         <specialInstruction code="ZZZ">
+            <text>( SEIS MIL SETECIENTOS VEINTITRES DÓLARES Y CINCUENTA Y CINCO CENTAVOS USD )</text>
+         </specialInstruction>
+         <specialInstruction code="LGT">
+            <text>P</text>
+         </specialInstruction>
+         <specialInstruction code="REG">
+            <text>Regimen general de Ley</text>
+         </specialInstruction>
+         <specialInstruction code="MNT">
+            <text>V6[#][#]927.39</text>
+         </specialInstruction>
+         <orderIdentification>
+            <referenceIdentification type="ON">15/coatza/626</referenceIdentification>
+         </orderIdentification>
+         <AdditionalInformation>
+            <referenceIdentification type="IV">P086869</referenceIdentification>
+         </AdditionalInformation>
+         <buyer>
+            <gln>0000000000000</gln>
+         </buyer>
+         <currency currencyISOCode="USD">
+            <currencyFunction>BILLING_CURRENCY</currencyFunction>
+            <rateOfChange>17.75</rateOfChange>
+         </currency>
+         <lineItem number="0001" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">SERVICIO-04</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>VULCANIZADO DE GUIAS NI.</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">1.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>SERVICIO-04</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>5796.16</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>5796.16</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">15/coatza/626</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>5796.16</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>5796.16</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <totalAmount>
+            <Amount>5796.16</Amount>
+         </totalAmount>
+         <baseAmount>
+            <Amount>5796.16</Amount>
+         </baseAmount>
+         <taxAmount>
+            <Amount>927.39</Amount>
+         </taxAmount>
+         <tax type="VAT">
+            <taxPercentage>16.00</taxPercentage>
+            <taxAmount>927.39</taxAmount>
+            <taxCategory>TRANSFERIDO</taxCategory>
+         </tax>
+         <payableAmount>
+            <Amount>6723.55</Amount>
+         </payableAmount>
+      </requestForPayment>
+   </cfdi:Addenda>
+</cfdi:Comprobante>

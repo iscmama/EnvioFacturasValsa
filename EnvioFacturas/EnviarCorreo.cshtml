@@ -1,0 +1,29 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Enviar Correo";
+
+    String IdFactura = Request.QueryString["IdFactura"];
+	
+
+    MandarCorreo ManCor = new MandarCorreo();
+
+    String Mandar = ManCor.MandaCorreo(IdFactura);
+    //Boolean Valido = ManCor.Manda(IdFactura);
+
+    
+    
+}
+
+<div class="page-header"><h1>Enviar Factura  <small><small></h1></div>
+
+<div class="row">
+    <center style="color: green;">Nada = @Mandar</center>
+
+
+    
+</div>

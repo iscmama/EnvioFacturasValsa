@@ -1,0 +1,69 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Agregar Correo";
+
+    String Informacion = "";
+    String IdCliente = "";
+    String Numero = "";
+    String Correo = "";
+    
+    if (IsPost)
+    {
+        IdCliente = Request.Form["IdCliente"];
+        Numero = Request.Form["Numero"];
+
+        String IdClienteDos = Request.Form["IdClienteDos"];
+        
+        if(IdClienteDos != null)
+        {
+            IdCliente = IdClienteDos;
+            //Si es distinto de null, significa que ya debo agregar el correo
+            Correo = Request.Form["Correo"];
+            Clientes Cli = new Clientes();
+            if(Cli.AgregarCorreo(IdCliente, Correo, Numero))
+            {
+                Response.Redirect("~/CorreosClientes?IdCliente=" + IdCliente + "&Numero=" + Numero);
+            }
+            else
+            {
+                Informacion = "Error ocurrido durante la operacion";
+            }
+        }
+        
+    }
+
+
+}
+
+<div class="page-header"><h1>Configuración de Clientes <small>Agregar Correo</small></h1></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Agregar Correo</div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" method="post">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Correo</label>
+                        <div class="col-sm-7">
+                            <input type="hidden" name="IdClienteDos" value="@IdCliente" />
+                            <input type="hidden" name="Numero" value="@Numero" />
+                            <input type="email" class="form-control" name="Correo" placeholder="ejemplo@dominio.com" required value="@Correo">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg center-block">Agregar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    @if (Informacion.Length != 0)
+    {
+        <center style="color: red;">@Informacion</center>
+    }
+</div>

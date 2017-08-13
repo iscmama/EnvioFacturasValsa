@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="TLALNEPANTLA,ESTADOS DE MEXICO" Moneda="USD" NumCtaPago="NO IDENTIFICADO" TipoCambio="17.7526" certificado="MIIEkDCCA3igAwIBAgIUMDAwMDEwMDAwMDAyMDEzNDQzODcwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxMzIwNDAwN1oXDTE2MDYxMzIwNDAwN1owgdExIzAhBgNVBAMTGlNBTkRWSUsgREUgTUVYSUNPIFNBIERFIENWMSMwIQYDVQQpExpTQU5EVklLIERFIE1FWElDTyBTQSBERSBDVjEjMCEGA1UEChMaU0FORFZJSyBERSBNRVhJQ08gU0EgREUgQ1YxJTAjBgNVBC0THFNNRTYxMDMxN1RHNiAvIExFTEc3MjA4MjE3RTExHjAcBgNVBAUTFSAvIExFTEc3MjA4MjFITkVEUlMwMjEZMBcGA1UECxMQRVNUQURPIERFIE1FWElDTzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAstNRY9sxbP7qtyArGGNZaxtaVA13Mr9QMJEj5o1yEhCV8kZ+ZgqB8QnOxIdYnUx9UDPd3UBiWHN2qGY/MERv84Rhaqoh3GO6cnT4Eelsz/XowlOhPqVCx319PXGYZPIT5xEQ/tc6I+HerNGzY/TttR/3rnliPZKH/f3LRCuYDr0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAJJLlDYcaj22H+Ricte2F8rf2kTMD7MG2TZGgagoOEdEkOaFMfJizLoQlFGyESwMrtGAfBQQRH6yITkexxbApfYAy1ioN/wsb/KEZQt30VC/R8Zs4IhCF/845Fe/rcoBqoZRYdk+0Roe8gK8Rtph7g31TbKLRnUAUroMlI0beZaV7gm2cCgaAmeY/vMkGFF7GaG31t3f8fVzegqI54Hc35wjCB3jQPSIiBKD815bad18737dvl9OKuDCaWff5K1nNory717zQn9Co1VRd3rgNJhaqnxogdsMN9tUuQrbBa9R+aNbHIO2NGNTK8GmRXlpQo8t8cn4+2U/CwbDiKSr/RE=" fecha="2016-03-21T22:05:03" folio="216284" formaDePago="Pago en una Sola Exhibición" metodoDePago="NO IDENTIFICADO" noCertificado="00001000000201344387" sello="BiW1R4DD9IPOnjqdcfdgOTN5mJJCkf6MtfXq54A8zmIXrxaEFAUN/OkMd59gH1Tut0FhBwGNyJQDOolzxzAoJ+bBCMJSArjy/6ILVxyjxtuQ8/ao4K6l9kLPLbRm7/0TUmiSIce4mxR03kM2dIuzSVdUFdOjtcfYI53rRM/WPuA=" serie="H" subTotal="873.22" tipoDeComprobante="ingreso" total="1012.94" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd">
+   <cfdi:Emisor nombre="SANDVIK DE MEXICO SA DE CV" rfc="SME610317TG6">
+      <cfdi:DomicilioFiscal calle="VIA GUSTAVO BAZ" codigoPostal="54060" colonia="LA LOMA" estado="ESTADOS DE MEXICO" municipio="TLALNEPANTLA" noExterior="352" pais="MEXICO"/>
+      <cfdi:RegimenFiscal Regimen="GENERAL DE LEY PERSONAS MORALES"/>
+   </cfdi:Emisor>
+   <cfdi:Receptor nombre="ABREMAQ SA DE CV" rfc="ABR040316IY5">
+      <cfdi:Domicilio calle="AV. HEROES FERROCARRILEROS 1296 COL.SAN CARLOS" codigoPostal="44460" estado="Jalisco" municipio="GUADALAJARA" pais="Mexico"/>
+   </cfdi:Receptor>
+   <cfdi:Conceptos>
+      <cfdi:Concepto cantidad="48.00" descripcion="HSS DRIL JOB 018632" importe="34.56" noIdentificacion="R18PN32" unidad="PZA" valorUnitario="0.7200"/>
+      <cfdi:Concepto cantidad="1.00" descripcion="HSS TSHANK JOB 020112" importe="67.50" noIdentificacion="2091.3/16" unidad="PZA" valorUnitario="67.5000"/>
+      <cfdi:Concepto cantidad="2.00" descripcion="HSS DRILL LONG 051033" importe="28.06" noIdentificacion="R5133/64" unidad="PZA" valorUnitario="14.0300"/>
+      <cfdi:Concepto cantidad="3.00" descripcion="HSS DRILL XL 057420" importe="30.90" noIdentificacion="08605/16" unidad="PZA" valorUnitario="10.3000"/>
+      <cfdi:Concepto cantidad="2.00" descripcion="HSS DRILL XL 059724" importe="60.54" noIdentificacion="18133/8" unidad="PZA" valorUnitario="30.2700"/>
+      <cfdi:Concepto cantidad="3.00" descripcion="STND MACH TAPS 1011766" importe="170.82" noIdentificacion="15441X11.1/2" unidad="PZA" valorUnitario="56.9400"/>
+      <cfdi:Concepto cantidad="24.00" descripcion="CYLINDRICAL 46480744" importe="12.72" noIdentificacion="301JDN56" unidad="PZA" valorUnitario="0.5300"/>
+      <cfdi:Concepto cantidad="20.00" descripcion="HSS DRILL STUB 040036" importe="233.60" noIdentificacion="R409/16" unidad="PZA" valorUnitario="11.6800"/>
+      <cfdi:Concepto cantidad="20.00" descripcion="TT HS JL ANSI118 0572146" importe="17.80" noIdentificacion="A0125/32" unidad="PZA" valorUnitario="0.8900"/>
+      <cfdi:Concepto cantidad="36.00" descripcion="CYL SHANK - LONG 059450" importe="216.72" noIdentificacion="QC91PN50" unidad="PZA" valorUnitario="6.0200"/>
+   </cfdi:Conceptos>
+   <cfdi:Impuestos totalImpuestosTrasladados="139.72">
+      <cfdi:Traslados>
+         <cfdi:Traslado importe="139.72" impuesto="IVA" tasa="16.00"/>
+      </cfdi:Traslados>
+   </cfdi:Impuestos>
+   <cfdi:Complemento>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2016-03-21T22:05:03" UUID="D5EF3912-0DC1-430D-8748-89511CCDD339" noCertificadoSAT="00001000000203631919" selloCFD="BiW1R4DD9IPOnjqdcfdgOTN5mJJCkf6MtfXq54A8zmIXrxaEFAUN/OkMd59gH1Tut0FhBwGNyJQDOolzxzAoJ+bBCMJSArjy/6ILVxyjxtuQ8/ao4K6l9kLPLbRm7/0TUmiSIce4mxR03kM2dIuzSVdUFdOjtcfYI53rRM/WPuA=" selloSAT="p/qeRGFk7X3TBki7n7pyUPvj024P+zOdS+QOAAboDfoAj7lGU14Kc6NVBmlyDZfZ0j5LuLAsxthB5P3lRM3vPb/JPlkwURoiUJfAyFrEzt3SWwk63m4vkMruflLZYiAh31FEpuBtQ1AochqCxhY08a1L0BRX50EhATjLJscXg3k=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+</cfdi:Complemento>
+<cfdi:Addenda>
+      <requestForPayment DeliveryDate="2016-03-21" contentVersion="1.3.1" documentStatus="ORIGINAL" documentStructureVersion="AMC7.1" type="SimpleInvoiceType">
+         <requestForPaymentIdentification>
+            <entityType>INVOICE</entityType>
+            <uniqueCreatorIdentification>H216284-160321220503</uniqueCreatorIdentification>
+         </requestForPaymentIdentification>
+         <specialInstruction code="ZZZ">
+            <text>( UN MIL DOCE DÓLARES Y NOVENTA Y CUATRO CENTAVOS USD )</text>
+         </specialInstruction>
+         <specialInstruction code="LGT">
+            <text>H</text>
+         </specialInstruction>
+         <specialInstruction code="REG">
+            <text>GENERAL DE LEY PERSONAS MORALES</text>
+         </specialInstruction>
+         <specialInstruction code="MNT">
+            <text>V6[#][#]139.72</text>
+         </specialInstruction>
+         <specialInstruction code="CLI">
+            <text>60002[#][#][#]1ZW18Y360491239129</text>
+         </specialInstruction>
+         <specialInstruction code="CON">
+            <text>R[#]SMTP[#][#]rocio.tovanche@abremaq.com[#][#]Estimado Cliente, Cualquier duda que pueda surgir sobre el envío y/o contenido de estos documentos estamos para servirle en la dirección de correo: cs.mexico@dormerpramet.com (Sandvik)</text>
+         </specialInstruction>
+         <orderIdentification>
+            <referenceIdentification type="ON">768</referenceIdentification>
+         </orderIdentification>
+         <AdditionalInformation>
+            <referenceIdentification type="ACE">711776001</referenceIdentification>
+            <referenceIdentification type="INT">216284</referenceIdentification>
+            <referenceIdentification type="IV">H216284</referenceIdentification>
+         </AdditionalInformation>
+         <buyer>
+            <gln>0000000000000</gln>
+         </buyer>
+         <currency currencyISOCode="USD">
+            <currencyFunction>BILLING_CURRENCY</currencyFunction>
+            <rateOfChange>17.7526</rateOfChange>
+         </currency>
+         <paymentTerms PaymentTermsRelationTime="REFERENCE_AFTER">
+            <netPayment netPaymentTermsType="BASIC_NET">
+               <paymentTimePeriod>
+                  <timePeriodDue timePeriod="DAYS">
+                     <value>1% 20 DAYS NET 30</value>
+                  </timePeriodDue>
+               </paymentTimePeriod>
+            </netPayment>
+         </paymentTerms>
+         <lineItem number="1" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">R18PN32</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>HSS DRIL JOB 018632</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">48.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>R18PN32</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.7200</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.7200</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>34.56</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>34.56</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="2" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">2091.3/16</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>HSS TSHANK JOB 020112</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">1.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>2091.3/16</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>67.5000</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>67.5000</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>67.50</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>67.50</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="3" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">R5133/64</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>HSS DRILL LONG 051033</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">2.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>R5133/64</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>14.0300</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>14.0300</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>28.06</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>28.06</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="4" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">08605/16</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>HSS DRILL XL 057420</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">3.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>08605/16</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>10.3000</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>10.3000</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>30.90</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>30.90</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="5" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">18133/8</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>HSS DRILL XL 059724</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">2.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>18133/8</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>30.2700</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>30.2700</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>60.54</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>60.54</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="6" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">15441X11.1/2</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>STND MACH TAPS 1011766</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">3.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>15441X11.1/2</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>56.9400</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>56.9400</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>170.82</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>170.82</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="7" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">301JDN56</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>CYLINDRICAL 46480744</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">24.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>301JDN56</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.5300</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.5300</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>12.72</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>12.72</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="8" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">R409/16</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>HSS DRILL STUB 040036</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">20.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>R409/16</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>11.6800</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>11.6800</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>233.60</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>233.60</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="9" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">A0125/32</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TT HS JL ANSI118 0572146</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">20.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>A0125/32</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.8900</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.8900</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>17.80</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>17.80</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="10" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">QC91PN50</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>CYL SHANK - LONG 059450</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">36.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>QC91PN50</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>6.0200</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>6.0200</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">768</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>216.72</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>216.72</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <totalAmount>
+            <Amount>873.22</Amount>
+         </totalAmount>
+         <taxAmount>
+            <Amount>139.72</Amount>
+         </taxAmount>
+         <tax type="VAT">
+            <taxPercentage>16.00</taxPercentage>
+            <taxAmount>139.72</taxAmount>
+            <taxCategory>TRANSFERIDO</taxCategory>
+         </tax>
+         <payableAmount>
+            <Amount>1012.94</Amount>
+         </payableAmount>
+      </requestForPayment>
+   </cfdi:Addenda>
+</cfdi:Comprobante>

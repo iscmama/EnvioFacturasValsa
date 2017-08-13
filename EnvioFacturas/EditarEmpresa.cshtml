@@ -1,0 +1,103 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    String IdSesion = (String)(Session["IdUsuario"].ToString());
+    String IdEmpresa = Request.QueryString["Id"];
+    
+    if(IdEmpresa.IsEmpty())
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    Generales Gen = new Generales();
+
+    if (!Gen.EsMaster(IdSesion))
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Crear Nueva Empresa";
+
+    String IdUsuario = "";
+
+    try
+    {
+        IdUsuario = (String)(Session["IdUsuario"].ToString());
+    }
+    catch
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Validaciones Val = new Validaciones();
+
+    Boolean EsMaster = Val.EsMaster(IdUsuario);
+
+    String Informacion = "";
+    Empresas Emp = new Empresas();
+
+    if (IsPost)
+    {
+        List<String> DatosEnviar = new List<String>();
+        DatosEnviar.Add(Request.Form["Nombre"]);
+        DatosEnviar.Add(Request.Form["RFC"]);
+        DatosEnviar.Add(IdEmpresa);
+
+        if (!Emp.EditarEmpresa(DatosEnviar))
+        {
+            Informacion = "Error ocurrido durante la modificación";
+        }
+        else
+        {
+            Response.Redirect("~/Empresas");
+        }
+    }
+
+    List<String> Lista = Emp.InformacionEmpresa(IdEmpresa);
+}
+
+<div class="page-header"><h1>Modificar Empresa <small>Modificación de empresa</small></h1></div>
+
+@if (Lista.Count == 0)
+{
+    <br />
+    <center style="color: red;">Error ocurrido al obtener información</center>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Nueva Cuenta</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="post">
+                        <h3 class="label label-primary">Información de la empresa</h3>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Razon Social</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="Nombre" placeholder="Razon Social" required value="@Lista[0]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">RFC</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="RFC" placeholder="RFC" required value="@Lista[1]">
+                            </div>
+                        </div>
+
+
+                        <button class="btn btn-primary btn-lg center-block">Modificar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @if (Informacion.Length != 0)
+        {
+            <center style="color: red;">@Informacion</center>
+        }
+    </div>
+    <script src="~/Scripts/chosen/chosen.jquery.js"></script>
+}

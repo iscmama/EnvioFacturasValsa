@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="TLALNEPANTLA,ESTADO DE MEXICO" Moneda="USD" NumCtaPago="BANK ACC" TipoCambio="17.7526" certificado="MIIEkDCCA3igAwIBAgIUMDAwMDEwMDAwMDAyMDEzNDQzODcwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxMzIwNDAwN1oXDTE2MDYxMzIwNDAwN1owgdExIzAhBgNVBAMTGlNBTkRWSUsgREUgTUVYSUNPIFNBIERFIENWMSMwIQYDVQQpExpTQU5EVklLIERFIE1FWElDTyBTQSBERSBDVjEjMCEGA1UEChMaU0FORFZJSyBERSBNRVhJQ08gU0EgREUgQ1YxJTAjBgNVBC0THFNNRTYxMDMxN1RHNiAvIExFTEc3MjA4MjE3RTExHjAcBgNVBAUTFSAvIExFTEc3MjA4MjFITkVEUlMwMjEZMBcGA1UECxMQRVNUQURPIERFIE1FWElDTzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAstNRY9sxbP7qtyArGGNZaxtaVA13Mr9QMJEj5o1yEhCV8kZ+ZgqB8QnOxIdYnUx9UDPd3UBiWHN2qGY/MERv84Rhaqoh3GO6cnT4Eelsz/XowlOhPqVCx319PXGYZPIT5xEQ/tc6I+HerNGzY/TttR/3rnliPZKH/f3LRCuYDr0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAJJLlDYcaj22H+Ricte2F8rf2kTMD7MG2TZGgagoOEdEkOaFMfJizLoQlFGyESwMrtGAfBQQRH6yITkexxbApfYAy1ioN/wsb/KEZQt30VC/R8Zs4IhCF/845Fe/rcoBqoZRYdk+0Roe8gK8Rtph7g31TbKLRnUAUroMlI0beZaV7gm2cCgaAmeY/vMkGFF7GaG31t3f8fVzegqI54Hc35wjCB3jQPSIiBKD815bad18737dvl9OKuDCaWff5K1nNory717zQn9Co1VRd3rgNJhaqnxogdsMN9tUuQrbBa9R+aNbHIO2NGNTK8GmRXlpQo8t8cn4+2U/CwbDiKSr/RE=" fecha="2016-03-22T09:56:30" folio="405422" formaDePago="Pago en una Sola Exhibición" metodoDePago="NO IDENTIFICADO" noCertificado="00001000000201344387" sello="ThqvDJvIEf3QixArlb7tDgj3GXmSOb+pJ48Xv81h4+UdZxlMYscUWiTFQ5TECwe7DEMpBG3EMX2ATxOjLWPOUKT4CKIyqbG+3q28XPRkievelHlSJAuYkTphHMf92IKWpAMaJDb5sNduf9Oirb/f2UTL3V5if7mPq81cXi1gXTQ=" serie="F" subTotal="88.45" tipoDeComprobante="ingreso" total="102.60" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd">
+   <cfdi:Emisor nombre="SANDVIK DE MEXICO SA DE CV" rfc="SME610317TG6">
+      <cfdi:DomicilioFiscal calle="VIA GUSTAVO BAZ" codigoPostal="54060" colonia="LA LOMA" estado="ESTADO DE MEXICO" municipio="TLALNEPANTLA" noExterior="352" pais="MEXICO"/>
+      <cfdi:RegimenFiscal Regimen="GENERAL DE LEY PERSONAS MORALES"/>
+   </cfdi:Emisor>
+   <cfdi:Receptor nombre="HERRAMIENTAS DE CORTE DE METALES SA DE CV" rfc="HCM851025B96">
+      <cfdi:Domicilio calle="AV.SALVADOR NAVA MARTINEZ N.2721 -INT.2 FRACC.BALCONES DEL VALLE" codigoPostal="78280" colonia="C.P.78280 SAN LUIS POTOSI S.L.P" estado="San Luis Potosí" municipio="S.L.P." pais="Mexico"/>
+   </cfdi:Receptor>
+   <cfdi:Conceptos>
+      <cfdi:Concepto cantidad="10.00" descripcion="Turning Spectrum,, roughi" importe="88.45" noIdentificacion="CCMT 09 T3 12-XR GC15" unidad="PZA" valorUnitario="8.8500"/>
+   </cfdi:Conceptos>
+   <cfdi:Impuestos totalImpuestosTrasladados="14.15">
+      <cfdi:Traslados>
+         <cfdi:Traslado importe="14.15" impuesto="IVA" tasa="16.00"/>
+      </cfdi:Traslados>
+   </cfdi:Impuestos>
+   <cfdi:Complemento>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2016-03-22T09:56:30" UUID="23701DF2-812E-4DC7-BF79-378E22765D9D" noCertificadoSAT="00001000000203631919" selloCFD="ThqvDJvIEf3QixArlb7tDgj3GXmSOb+pJ48Xv81h4+UdZxlMYscUWiTFQ5TECwe7DEMpBG3EMX2ATxOjLWPOUKT4CKIyqbG+3q28XPRkievelHlSJAuYkTphHMf92IKWpAMaJDb5sNduf9Oirb/f2UTL3V5if7mPq81cXi1gXTQ=" selloSAT="Ftd8/114Euz7leBxB+JsCtfBI5zwjfa0d2bDq1w7EVVpj/AXDToH/yBIMpD6jhEZ1R+3J3OQP6ubNgNXS0jHqyoql3nlSlLcVomy37/S9S1Ib7Y0lF3A8QuKGCOnXFFkT+JtUgFKVb+hzZeN+jldYnTyFWL5ibzlSbBqV3f6RZ4=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+</cfdi:Complemento>
+<cfdi:Addenda>
+      <requestForPayment DeliveryDate="2016-03-22" contentVersion="1.3.1" documentStatus="ORIGINAL" documentStructureVersion="AMC7.1" type="SimpleInvoiceType">
+         <requestForPaymentIdentification>
+            <entityType>INVOICE</entityType>
+            <uniqueCreatorIdentification>F405422-160322095630</uniqueCreatorIdentification>
+         </requestForPaymentIdentification>
+         <specialInstruction code="ZZZ">
+            <text>( CIENTO DOS DÓLARES Y SESENTA CENTAVOS USD )</text>
+         </specialInstruction>
+         <specialInstruction code="LGT">
+            <text>F</text>
+         </specialInstruction>
+         <specialInstruction code="REG">
+            <text>GENERAL DE LEY PERSONAS MORALES</text>
+         </specialInstruction>
+         <specialInstruction code="MNT">
+            <text>V6[#][#]14.15</text>
+         </specialInstruction>
+         <specialInstruction code="CLI">
+            <text>8141[#][#][#]1Z67EA070493630083</text>
+         </specialInstruction>
+         <specialInstruction code="CON">
+            <text>E[#][#]ALEJANDRO ZAPATA[#]facturas.coromant@sandvik.com[#]55 5729 3936</text>
+         </specialInstruction>
+         <specialInstruction code="CON">
+            <text>R[#]SMTP[#][#]adela.facturas@hercomet.com.mx,alejandro.zapata@hercomet.com.mx,facturas.coromant@sandvik.com[#][#]Estimado Cliente, Cualquier duda que pueda surgir sobre el envío y/o contenido de estos documentos estamos para servirle en la dirección de correo: facturas.coromant@sandvik.com (Sandvik)</text>
+         </specialInstruction>
+         <orderIdentification>
+            <referenceIdentification type="ON">HCM16-151</referenceIdentification>
+         </orderIdentification>
+         <AdditionalInformation>
+            <referenceIdentification type="ACE">498429002</referenceIdentification>
+            <referenceIdentification type="INT">405422</referenceIdentification>
+            <referenceIdentification type="IV">F405422</referenceIdentification>
+         </AdditionalInformation>
+         <buyer>
+            <gln>0000000000000</gln>
+         </buyer>
+         <InvoiceCreator>
+            <nameAndAddress>
+               <name>55 5729 3936 ALEJANDRO ZAPATA</name>
+               <telephone>55 5729 3936</telephone>
+            </nameAndAddress>
+         </InvoiceCreator>
+         <currency currencyISOCode="USD">
+            <currencyFunction>BILLING_CURRENCY</currencyFunction>
+            <rateOfChange>17.7526</rateOfChange>
+         </currency>
+         <paymentTerms PaymentTermsRelationTime="REFERENCE_AFTER">
+            <netPayment netPaymentTermsType="BASIC_NET">
+               <paymentTimePeriod>
+                  <timePeriodDue timePeriod="DAYS">
+                     <value>45 DIAS NETO</value>
+                  </timePeriodDue>
+               </paymentTimePeriod>
+            </netPayment>
+         </paymentTerms>
+         <lineItem number="2" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">CCMT 09 T3 12-XR GC15</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Turning Spectrum,, roughi</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">10.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>CCMT 09 T3 12-XR GC15</text>
+               <text>B-6;</text>
+            </specialInstruction>
+            <specialInstruction code="DTO">
+               <text>DTO[#]39</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>14.5000</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>8.8500</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">HCM16-151</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>88.45</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>88.45</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <totalAmount>
+            <Amount>88.45</Amount>
+         </totalAmount>
+         <taxAmount>
+            <Amount>14.15</Amount>
+         </taxAmount>
+         <tax type="VAT">
+            <taxPercentage>16.00</taxPercentage>
+            <taxAmount>14.15</taxAmount>
+            <taxCategory>TRANSFERIDO</taxCategory>
+         </tax>
+         <payableAmount>
+            <Amount>102.60</Amount>
+         </payableAmount>
+      </requestForPayment>
+   </cfdi:Addenda>
+</cfdi:Comprobante>

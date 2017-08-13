@@ -1,0 +1,83 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    String IdSesion = (String)(Session["IdUsuario"].ToString());
+    Generales Gen = new Generales();
+
+    if (!Gen.EsMaster(IdSesion))
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Gestión de Empresas";
+
+    if (IsPost)
+    {
+        Response.Redirect("~/NuevaEmpresa");
+    }
+
+    String IdUsuario = "";
+
+    try
+    {
+        IdUsuario = (String)(Session["IdUsuario"].ToString());
+    }
+    catch
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Empresas Emp = new Empresas();
+    List<String> Lista = Emp.ObtenerEmpresas();
+}
+
+<div class="page-header"><h1>Configuración de Empresas <small>Lista de Empresas</small></h1></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table id="example" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>RFC</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Lista.Count != 0)
+                {
+                    for (int i = 0; i < (Lista.Count / 3); i++)
+                    {
+                        <tr>
+                            <td>@Lista[(i * 3) + 1]</td>
+                            <td>@Lista[(i * 3) + 2]</td>
+                            <td>
+                                <div class="dropdown user-login">
+                                    <button class="btn btn-xs dropdown-toggle btn-rounded btn-block" style="background-color: transparent !important;" type="button" data-toggle="dropdown" aria-expanded="true">
+                                        Seleccione Acción a Realizar <i class="fa fa-angle-down"> </i>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="@Lista[(i * 3) + 0]">
+                                        <li role="presentation"><a role="menuitem" href="~/EditarEmpresa?Id=@Lista[(i * 3) + 0]"><i class="fa fa-cog"></i> Editar</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        <form class="form-horizontal" role="form" method="post">
+            <button class="btn btn-primary btn-lg center-block">Crear Nueva</button>
+        </form>
+        <script src="~/Scripts/datatable/jquery.dataTables.min.js"></script>
+        <script>
+            $(function () {
+                $("#example").dataTable();
+            })
+        </script>
+    </div>
+</div>

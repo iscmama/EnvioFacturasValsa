@@ -1,0 +1,133 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Facturas Fac = new Facturas();
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Registro de Logs";
+
+
+    String Inicio = "";
+    String Fin = "";
+
+    if (IsPost)
+    {
+        Inicio = Request.Form["Desde"];
+        Fin = Request.Form["Hasta"];
+    }
+    else
+    {
+        //Asigno fecha inicial
+        Inicio = Fac.FechaInicial();
+    }
+
+    String IdUsuario = "";
+
+    try
+    {
+        IdUsuario = (String)(Session["IdUsuario"].ToString());
+    }
+    catch
+    {
+        Response.Redirect("~/Default");
+    }
+
+
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" method="post">
+
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">Desde</label>
+                        <div class="col-sm-2">
+                            <input type='text' class="form-control" id='datetimepicker4' name="Desde" placeholder="Desde" value="@Inicio" />
+                           <script>
+                                $(function () {
+                                    $("#datetimepicker4").datepicker({ dateFormat: 'yy-mm-dd' });
+                                });
+                            </script>
+                        </div>
+                        <label class="col-sm-1 control-label">Hasta</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id='datetimepicker3' name="Hasta" placeholder="Hasta" value="@Fin">
+                            <script>
+                                $(function () {
+                                    $("#datetimepicker3").datepicker({ dateFormat: 'yy-mm-dd' });
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <button class="btn btn-primary btn-lg center-block">Buscar</button>
+                    <br />
+                    <br />
+                    <br />
+                </form>
+            </div>
+        </div>
+    </div>
+<div class="col-md-12" style="overflow-x: auto;">
+
+                    <table id="example" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Módulo</th>
+                                <th>Error</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (IsPost)
+                            {
+                                Variables Vari = new Variables();
+                                Vari.Inicio = Inicio.Replace("-", "");
+                                Vari.Fin = Fin.Replace("-", "");
+                                Logs Log = new Logs();
+                                List<Variables> Lista = Log.ObtenerLogs(Vari);
+                                if (Lista != null)
+                                {
+                                    foreach (Variables Var in Lista)
+                                    {
+                                        <tr>
+                                            <td>@Var.Fecha</td>
+                                            <td>@Var.Modulo</td>
+                                            <td>@Var.Descripcion</td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+
+                    <script src="~/Scripts/datatable/jquery.dataTables.min.js"></script>
+                    <script>
+                        $(function () {
+                            $("#example").dataTable();
+                        })
+                    </script>
+                </div>
+
+
+                <div class="col-md-12">
+                    <form class="form-horizontal" role="form" action="Reiniciar" method="post" target="_blank">
+
+                        <button class="btn btn-success btn-lg center-block">Reiniciar Proceso</button>
+                    </form>
+                </div>
+</div>
+
+
+
+<script src="~/Scripts/chosen/chosen.jquery.js"></script>

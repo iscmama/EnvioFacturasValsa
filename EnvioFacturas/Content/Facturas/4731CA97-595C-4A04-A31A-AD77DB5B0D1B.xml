@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="TLALNEPANTLA,ESTADO DE MEXICO" Moneda="USD" NumCtaPago="BANK ACC" TipoCambio="17.7526" certificado="MIIEkDCCA3igAwIBAgIUMDAwMDEwMDAwMDAyMDEzNDQzODcwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxMzIwNDAwN1oXDTE2MDYxMzIwNDAwN1owgdExIzAhBgNVBAMTGlNBTkRWSUsgREUgTUVYSUNPIFNBIERFIENWMSMwIQYDVQQpExpTQU5EVklLIERFIE1FWElDTyBTQSBERSBDVjEjMCEGA1UEChMaU0FORFZJSyBERSBNRVhJQ08gU0EgREUgQ1YxJTAjBgNVBC0THFNNRTYxMDMxN1RHNiAvIExFTEc3MjA4MjE3RTExHjAcBgNVBAUTFSAvIExFTEc3MjA4MjFITkVEUlMwMjEZMBcGA1UECxMQRVNUQURPIERFIE1FWElDTzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAstNRY9sxbP7qtyArGGNZaxtaVA13Mr9QMJEj5o1yEhCV8kZ+ZgqB8QnOxIdYnUx9UDPd3UBiWHN2qGY/MERv84Rhaqoh3GO6cnT4Eelsz/XowlOhPqVCx319PXGYZPIT5xEQ/tc6I+HerNGzY/TttR/3rnliPZKH/f3LRCuYDr0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAJJLlDYcaj22H+Ricte2F8rf2kTMD7MG2TZGgagoOEdEkOaFMfJizLoQlFGyESwMrtGAfBQQRH6yITkexxbApfYAy1ioN/wsb/KEZQt30VC/R8Zs4IhCF/845Fe/rcoBqoZRYdk+0Roe8gK8Rtph7g31TbKLRnUAUroMlI0beZaV7gm2cCgaAmeY/vMkGFF7GaG31t3f8fVzegqI54Hc35wjCB3jQPSIiBKD815bad18737dvl9OKuDCaWff5K1nNory717zQn9Co1VRd3rgNJhaqnxogdsMN9tUuQrbBa9R+aNbHIO2NGNTK8GmRXlpQo8t8cn4+2U/CwbDiKSr/RE=" fecha="2016-03-22T09:57:46" folio="405425" formaDePago="Pago en una Sola Exhibición" metodoDePago="NO IDENTIFICADO" noCertificado="00001000000201344387" sello="pC+97g5Ynx5QIl5kJvP039xp/MvI9Jd7o0np2LxorDFRE37AerfGikIGBC12ryySmcGQwkujyqD3Hp3at+qjpB7w76Jdf9Ezwivz7FHPlUhxkn6ei3XDEADg8qOojs1la1kNbXqF6N5V3xhuMoKGhcmMLOMzGM4ZV/qHufWFyyM=" serie="F" subTotal="90.74" tipoDeComprobante="ingreso" total="105.26" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd">
+   <cfdi:Emisor nombre="SANDVIK DE MEXICO SA DE CV" rfc="SME610317TG6">
+      <cfdi:DomicilioFiscal calle="VIA GUSTAVO BAZ" codigoPostal="54060" colonia="LA LOMA" estado="ESTADO DE MEXICO" municipio="TLALNEPANTLA" noExterior="352" pais="MEXICO"/>
+      <cfdi:RegimenFiscal Regimen="GENERAL DE LEY PERSONAS MORALES"/>
+   </cfdi:Emisor>
+   <cfdi:Receptor nombre="KOLBENSCHMIDT DE MEXICO S DE RL DE CV" rfc="KME051123NU0">
+      <cfdi:Domicilio calle="CARR. PANAMERICANA KM 284 COL. FRACCION DE CRESPO" codigoPostal="38110" estado="Guanajuato" municipio="CELAYA" pais="Mexico"/>
+   </cfdi:Receptor>
+   <cfdi:Conceptos>
+      <cfdi:Concepto cantidad="5.00" descripcion="Wedge clamps" importe="90.74" noIdentificacion="4270000188" unidad="PZA" valorUnitario="18.1500"/>
+   </cfdi:Conceptos>
+   <cfdi:Impuestos totalImpuestosTrasladados="14.52">
+      <cfdi:Traslados>
+         <cfdi:Traslado importe="14.52" impuesto="IVA" tasa="16.00"/>
+      </cfdi:Traslados>
+   </cfdi:Impuestos>
+   <cfdi:Complemento>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2016-03-22T09:57:46" UUID="4731CA97-595C-4A04-A31A-AD77DB5B0D1B" noCertificadoSAT="00001000000203631919" selloCFD="pC+97g5Ynx5QIl5kJvP039xp/MvI9Jd7o0np2LxorDFRE37AerfGikIGBC12ryySmcGQwkujyqD3Hp3at+qjpB7w76Jdf9Ezwivz7FHPlUhxkn6ei3XDEADg8qOojs1la1kNbXqF6N5V3xhuMoKGhcmMLOMzGM4ZV/qHufWFyyM=" selloSAT="VFlxygP5BxsN5jyHV0ixIlbjNke0338xB6UXT1U/+4uLpCpNfxB+LU4TMxSg8AUwalU7wi7lcTXQnd9xfwvxMw9Rg/7qY9HMeESmJORdJqLieslBzqok8aHSTY+yx5N30EdyykLNFJeFYrn4sy5WO2+jMuqeKEfc8H9wD6MKt0k=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+</cfdi:Complemento>
+<cfdi:Addenda>
+      <requestForPayment DeliveryDate="2016-03-22" contentVersion="1.3.1" documentStatus="ORIGINAL" documentStructureVersion="AMC7.1" type="SimpleInvoiceType">
+         <requestForPaymentIdentification>
+            <entityType>INVOICE</entityType>
+            <uniqueCreatorIdentification>F405425-160322095746</uniqueCreatorIdentification>
+         </requestForPaymentIdentification>
+         <specialInstruction code="ZZZ">
+            <text>( CIENTO CINCO DÓLARES Y VEINTISEIS CENTAVOS USD )</text>
+         </specialInstruction>
+         <specialInstruction code="LGT">
+            <text>F</text>
+         </specialInstruction>
+         <specialInstruction code="REG">
+            <text>GENERAL DE LEY PERSONAS MORALES</text>
+         </specialInstruction>
+         <specialInstruction code="MNT">
+            <text>V6[#][#]14.52</text>
+         </specialInstruction>
+         <specialInstruction code="CLI">
+            <text>2111[#][#][#]1Z67EA070493630136</text>
+         </specialInstruction>
+         <specialInstruction code="CON">
+            <text>E[#][#]GREGORIO MARTINEZ[#]facturas.coromant@sandvik.com[#]55 5729 3936</text>
+         </specialInstruction>
+         <specialInstruction code="CON">
+            <text>R[#]SMTP[#][#]ksmxacctinv@ksmx.net,tpm31qro@hotmail.com,facturas.coromant@sandvik.com[#][#]Estimado Cliente, Cualquier duda que pueda surgir sobre el envío y/o contenido de estos documentos estamos para servirle en la dirección de correo: facturas.coromant@sandvik.com (Sandvik)</text>
+         </specialInstruction>
+         <orderIdentification>
+            <referenceIdentification type="ON">24054950</referenceIdentification>
+         </orderIdentification>
+         <AdditionalInformation>
+            <referenceIdentification type="ACE">497884001</referenceIdentification>
+            <referenceIdentification type="INT">405425</referenceIdentification>
+            <referenceIdentification type="IV">F405425</referenceIdentification>
+         </AdditionalInformation>
+         <buyer>
+            <gln>0000000000000</gln>
+         </buyer>
+         <InvoiceCreator>
+            <nameAndAddress>
+               <name>55 5729 3936 GREGORIO MARTINEZ</name>
+               <telephone>55 5729 3936</telephone>
+            </nameAndAddress>
+         </InvoiceCreator>
+         <currency currencyISOCode="USD">
+            <currencyFunction>BILLING_CURRENCY</currencyFunction>
+            <rateOfChange>17.7526</rateOfChange>
+         </currency>
+         <paymentTerms PaymentTermsRelationTime="REFERENCE_AFTER">
+            <netPayment netPaymentTermsType="BASIC_NET">
+               <paymentTimePeriod>
+                  <timePeriodDue timePeriod="DAYS">
+                     <value>60 DIAS NETO</value>
+                  </timePeriodDue>
+               </paymentTimePeriod>
+            </netPayment>
+         </paymentTerms>
+         <lineItem number="100" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">4270000188</alternateTradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">170.38-820-1</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Wedge clamps</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">5.00</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>170.38-820-1</text>
+            </specialInstruction>
+            <specialInstruction code="DTO">
+               <text>DTO[#]15</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>21.3500</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>18.1500</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">24054950</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>90.74</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>90.74</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <totalAmount>
+            <Amount>90.74</Amount>
+         </totalAmount>
+         <taxAmount>
+            <Amount>14.52</Amount>
+         </taxAmount>
+         <tax type="VAT">
+            <taxPercentage>16.00</taxPercentage>
+            <taxAmount>14.52</taxAmount>
+            <taxCategory>TRANSFERIDO</taxCategory>
+         </tax>
+         <payableAmount>
+            <Amount>105.26</Amount>
+         </payableAmount>
+      </requestForPayment>
+   </cfdi:Addenda>
+</cfdi:Comprobante>

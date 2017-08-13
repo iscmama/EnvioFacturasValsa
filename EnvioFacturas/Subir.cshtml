@@ -1,0 +1,232 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Facturas Fac = new Facturas();
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Subir Acuse";
+
+    String Error = "";
+
+
+    String IdUsuario = "";
+    String IdFactura = Request.QueryString["IdFactura"];
+    try
+    {
+        IdUsuario = (String)(Session["IdUsuario"].ToString());
+    }
+    catch
+    {
+        Response.Redirect("~/Default");
+    }
+
+    if (IsPost)
+    {
+        try
+        {
+            Random obj = new Random();
+            string posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            int longitud = posibles.Length;
+            char letra;
+            int longitudnuevacadena = 15;
+            string nuevacadena = "";
+            for (int i = 0; i < longitudnuevacadena; i++)
+            {
+                letra = posibles[obj.Next(longitud)];
+                nuevacadena += letra.ToString();
+            }
+
+            var file = Request.Files["file"];
+            if (file.ContentLength > 0)
+            {
+                String[] Temp = Path.GetFileName(file.FileName).Split('.');
+                String Extension = Temp[Temp.Length - 1];
+                String NombreArchivo = nuevacadena + "." + Extension;
+                IdFactura = Request.Form["Factura"];
+                String path = Server.MapPath("~/Acuse/" + NombreArchivo);
+                ObjetoAcuse Acu = new ObjetoAcuse();
+                Acu.IdFactura = IdFactura;
+                Acu.IdUsuario = IdUsuario;
+                Acu.Archivo = NombreArchivo;
+                if(Fac.SubirAcuse(Acu))
+                {
+                    file.SaveAs(path);
+                }
+                else
+                {
+                    Error = "Error ocurrido al procesar la petición";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Error = ex.Message;
+        }
+    }
+}
+
+<script src="~/Scripts/bootstrap/bootstrap-filestyle.js"></script>
+@if (IdFactura.IsEmpty())
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>Ha ocurrido un error: </strong> No se encuentra la factura para subir acuse
+    </div>
+}
+else
+{
+    if (IsPost)
+    {
+        if (Error.Length == 0)
+        {
+            Response.Redirect("~/BusquedaEspecifica");
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form method="post" enctype="multipart/form-data" class="form-horizontal" role="form">
+                                <h3 class="label label-primary">Carga de Acuse</h3>
+                                <div class="form-group  col-sm-12">
+                                    <label class="col-sm-2 control-label">Acuse</label>
+                                    <div class="col-sm-4">
+                                        <input type="file" name="file" id="input12">
+                                        <input type="hidden" name="Factura" value="@IdFactura">
+                                    </div>
+                                </div>
+                                <div class="form-group  col-sm-12">
+                                    <button class="btn btn-primary center-block">Subir</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-danger" role="alert">
+                <strong>Ha ocurrido un error: </strong> @Error
+            </div>
+        }
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form method="post" enctype="multipart/form-data" class="form-horizontal" role="form">
+                            <h3 class="label label-primary">Carga de Acuse</h3>
+                            <div class="form-group col-sm-12">
+                                <label class="col-sm-2 control-label">Acuse</label>
+                                <div class="col-sm-4">
+                                    <input type="file" name="file" id="input12">
+                                    <input type="hidden" name="Factura" value="@IdFactura">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <button class="btn btn-primary center-block">Subir</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+
+<script type="text/javascript">
+			$('#input01').filestyle()
+			$('#input001').filestyle({
+				'placeholder' : 'Placeholder test'
+			});
+			$('#input02').filestyle({
+				buttonText : 'My filestyle'
+			});
+
+			$('#input03').filestyle({
+				input : false,
+				buttonName : 'btn-primary'
+			});
+
+			$('#input04').filestyle({
+				icon : false
+			});
+
+			$('#input05').filestyle({
+				buttonName : 'btn-warning'
+			});
+
+			$('#input07').filestyle({
+				iconName : 'glyphicon glyphicon-plus',
+				buttonText : 'Add'
+			});
+
+			$('#input08').filestyle({
+				buttonText : ' File',
+				buttonName : 'btn-success'
+			});
+
+			$('#clear').click(function() {
+				$('#input08').filestyle('clear');
+			});
+
+			$('#input09').filestyle({
+				buttonText : 'File',
+				buttonName : 'btn-primary'
+			});
+
+			$('#toggleInput').click(function() {
+				var fs = $('#input09');
+				if (fs.filestyle('input'))
+					fs.filestyle('input', false);
+				else
+					fs.filestyle('input', true);
+			});
+
+			$('#input10').filestyle({
+				buttonText : 'File',
+				buttonName : 'btn-primary'
+			});
+
+			$('#toggleIcon').click(function() {
+				var fs = $('#input10');
+				if (fs.filestyle('icon'))
+					fs.filestyle('icon', false);
+				else
+					fs.filestyle('icon', true);
+			});
+
+			$('#input11').filestyle({
+				buttonText : 'Multiple',
+				buttonName : 'btn-danger'
+			});
+
+			$('#input12').filestyle({
+			    iconName: 'fa fa-folder-open',
+				buttonText : ''
+			});
+
+			$('#input13').filestyle({
+				disabled : true
+			});
+
+			$('#input14').filestyle({
+				buttonBefore : true
+			});
+			$('#input15').filestyle({
+				size : 'lg'
+			});
+			$('#input15').filestyle({
+				input : false,
+				badge: false
+			});
+
+			// nultiple initialize
+			$('.test').filestyle({
+				buttonName : 'btn-primary'
+			});
+</script>

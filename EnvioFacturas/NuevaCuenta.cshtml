@@ -1,0 +1,132 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    String IdSesion = (String)(Session["IdUsuario"].ToString());
+    Generales Gen = new Generales();
+
+    if (!Gen.EsAdministrador(IdSesion) && !Gen.EsMaster(IdSesion))
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Crear Nueva Cuenta";
+
+    String IdUsuario = "";
+
+    try
+    {
+        IdUsuario = (String)(Session["IdUsuario"].ToString());
+    }
+    catch
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Validaciones Val = new Validaciones();
+
+    Boolean EsMaster = Val.EsMaster(IdUsuario);
+
+    String Informacion = "";
+    GestionCuentas GesCue = new GestionCuentas();
+    List<String> ListaEmpreas = GesCue.ObtenerEmpresas(IdUsuario);
+
+    if (IsPost)
+    {
+        if (GesCue.ExisteCuenta(Request.Form["Usuario"]))
+        {
+            Informacion = "Nombre de usuario ya existe";
+        }
+        else
+        {
+            List<String> DatosEnviar = new List<String>();
+            DatosEnviar.Add(Request.Form["Nombre"]);
+            DatosEnviar.Add(Request.Form["Usuario"]);
+            DatosEnviar.Add(Request.Form["Password"]);
+            DatosEnviar.Add(Request.Form["Tipo"]);
+            DatosEnviar.Add(Request.Form["Empresa"]);
+
+            if (!GesCue.CrearCuenta(DatosEnviar))
+            {
+                Informacion = "Error ocurrido durante la creación";
+            }
+            else
+            {
+                Response.Redirect("~/GestionarCuentas");
+            }
+        }
+    }
+}
+
+<div class="page-header"><h1>Nueva Cuenta <small>Creación de nueva cuenta</small></h1></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Nueva Cuenta</div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" method="post">
+                    <h3 class="label label-primary">Información del usuario</h3>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="Nombre" placeholder="Nombre Completo" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Empresa</label>
+                        <div class="col-sm-4">
+                            <select class="form-control chosen-select" data-placeholder="Seleccione una empresa" name="Empresa" required>
+                                <option></option>
+                                @if (ListaEmpreas.Count != 0)
+                                {
+                                    for (int i = 0; i < (ListaEmpreas.Count / 2); i++)
+                                    {
+                                        <option value="@ListaEmpreas[(i * 2) + 0]">@ListaEmpreas[(i * 2) + 1]</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr class="dotted">
+                    <h3 class="label label-success">Información de acceso</h3>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Usuario</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="Usuario" placeholder="Usuario" required>
+                        </div>
+                        <label class="col-sm-2 control-label">Contraseña</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" name="Password" placeholder="Contraseña" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Tipo de Cuenta</label>
+                        <div class="col-sm-4">
+                            <select class="form-control chosen-select" data-placeholder="Seleccione un Tipo" name="Tipo" required>
+                                <option></option>
+                                <option value="0">Normal</option>
+                                @if (EsMaster)
+                                {
+                                    <option value="1">Administrador</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <button class="btn btn-primary btn-lg center-block">Agregar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    @if (Informacion.Length != 0)
+    {
+        <center style="color: red;">@Informacion</center>
+    }
+</div>
+<script src="~/Scripts/chosen/chosen.jquery.js"></script>

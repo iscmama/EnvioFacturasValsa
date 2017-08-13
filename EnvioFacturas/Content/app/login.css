@@ -1,0 +1,27 @@
+.login-panel {
+    background: url(../../images/bg/panel-white-login.png) repeat;
+    color: #fff;
+	margin-top: 60px;
+	padding: 25px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+}
+
+.login-background {
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -999999;
+    position: fixed;
+}
+
+.login-logo{
+	margin-top:50px;
+}

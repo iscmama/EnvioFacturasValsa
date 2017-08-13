@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:eu="http://factura.envasesuniversales.com/addenda/eu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="TLALNEPANTLA, ESTADO DE MEXICO" Moneda="USD" TipoCambio="17.752600" certificado="MIIEkDCCA3igAwIBAgIUMDAwMDEwMDAwMDAyMDEzNDQzODcwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxMzIwNDAwN1oXDTE2MDYxMzIwNDAwN1owgdExIzAhBgNVBAMTGlNBTkRWSUsgREUgTUVYSUNPIFNBIERFIENWMSMwIQYDVQQpExpTQU5EVklLIERFIE1FWElDTyBTQSBERSBDVjEjMCEGA1UEChMaU0FORFZJSyBERSBNRVhJQ08gU0EgREUgQ1YxJTAjBgNVBC0THFNNRTYxMDMxN1RHNiAvIExFTEc3MjA4MjE3RTExHjAcBgNVBAUTFSAvIExFTEc3MjA4MjFITkVEUlMwMjEZMBcGA1UECxMQRVNUQURPIERFIE1FWElDTzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAstNRY9sxbP7qtyArGGNZaxtaVA13Mr9QMJEj5o1yEhCV8kZ+ZgqB8QnOxIdYnUx9UDPd3UBiWHN2qGY/MERv84Rhaqoh3GO6cnT4Eelsz/XowlOhPqVCx319PXGYZPIT5xEQ/tc6I+HerNGzY/TttR/3rnliPZKH/f3LRCuYDr0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAJJLlDYcaj22H+Ricte2F8rf2kTMD7MG2TZGgagoOEdEkOaFMfJizLoQlFGyESwMrtGAfBQQRH6yITkexxbApfYAy1ioN/wsb/KEZQt30VC/R8Zs4IhCF/845Fe/rcoBqoZRYdk+0Roe8gK8Rtph7g31TbKLRnUAUroMlI0beZaV7gm2cCgaAmeY/vMkGFF7GaG31t3f8fVzegqI54Hc35wjCB3jQPSIiBKD815bad18737dvl9OKuDCaWff5K1nNory717zQn9Co1VRd3rgNJhaqnxogdsMN9tUuQrbBa9R+aNbHIO2NGNTK8GmRXlpQo8t8cn4+2U/CwbDiKSr/RE=" condicionesDePago="45 Días desde fecha factura, neto" fecha="2016-03-08T18:13:15" folio="4010109" formaDePago="Pago en una sola exhibicion" metodoDePago="Transferencia" noCertificado="00001000000201344387" sello="re5sTSetUU0oK1ULQ15xUXdQYSgKINyuswxgy9wgoJgsqeog2dUq+u8AcvsfZUNFTlhOxvn78pEARRr/Vf+MWIONuAqxGntTBM58baNuRfxSY09AcsACGIpm8kAfBEbrCBIA20yLwtRuuL1VE/Yr2y1V2kC5UQJ0ORUzQBpfw4U=" serie="MC" subTotal="26600.00" tipoDeComprobante="egreso" total="30856.00" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://factura.envasesuniversales.com/addenda/eu http://factura.envasesuniversales.com/addenda/eu/EU_Addenda.xsd">
+   <cfdi:Emisor nombre="SANDVIK DE MEXICO SA de CV" rfc="SME610317TG6">
+      <cfdi:DomicilioFiscal calle="VIA GUSTAVO BAZ" codigoPostal="54060" colonia="LA LOMA" estado="ESTADO DE MEXICO" localidad="MEXICO" municipio="TLALNEPANTLA" noExterior="352" pais="MEXICO"/>
+      <cfdi:RegimenFiscal Regimen="Regimen general de Ley"/>
+   </cfdi:Emisor>
+   <cfdi:Receptor nombre="ENVASES UNIVERSALES DE MEXICO SAPI DE CV" rfc="EUM000707DQ2">
+      <cfdi:Domicilio calle="CALZ DE GUADALUPE No.504 COL CENTRO" colonia="CUAUTITLAN EDO DE MEXICO" municipio="54000 ESTADO DE MEXICO" pais="Mexico"/>
+   </cfdi:Receptor>
+   <cfdi:Conceptos>
+      <cfdi:Concepto cantidad="200" descripcion="IRON DIE ASSEMBLY" importe="26600.00" noIdentificacion="CAMID10378-99" unidad="PCE" valorUnitario="133.00"/>
+   </cfdi:Conceptos>
+   <cfdi:Impuestos totalImpuestosTrasladados="4256.00">
+      <cfdi:Traslados>
+         <cfdi:Traslado importe="4256.00" impuesto="IVA" tasa="16.00"/>
+      </cfdi:Traslados>
+   </cfdi:Impuestos>
+   <cfdi:Complemento>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2016-03-08T18:13:15" UUID="36B76FEE-DAF8-4FDC-81AC-BABA350A4E36" noCertificadoSAT="00001000000203631919" selloCFD="re5sTSetUU0oK1ULQ15xUXdQYSgKINyuswxgy9wgoJgsqeog2dUq+u8AcvsfZUNFTlhOxvn78pEARRr/Vf+MWIONuAqxGntTBM58baNuRfxSY09AcsACGIpm8kAfBEbrCBIA20yLwtRuuL1VE/Yr2y1V2kC5UQJ0ORUzQBpfw4U=" selloSAT="J4AvGanS0kROVMV92lrHr41pbqaY2Od30LpwKrMtoMo9BbLqVDeN4Z8xnUHM2AdoMt+6o2Uz4yGKNxeQckgVUZQbjKtX2TEGAMGISgWMNk5Pqt/XgNNsi5fb1VKAMODiox4955zDD+x8rPFyPKQge00Dzziw0NY3Ujc3CpHifgI=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+</cfdi:Complemento>
+<cfdi:Addenda>
+      <requestForPayment DeliveryDate="2016-03-08" contentVersion="1.3.1" documentStatus="ORIGINAL" documentStructureVersion="AMC7.1" type="SimpleInvoiceType">
+         <requestForPaymentIdentification>
+            <entityType>CREDIT_NOTE</entityType>
+            <uniqueCreatorIdentification>MC4010109-160308181315</uniqueCreatorIdentification>
+         </requestForPaymentIdentification>
+         <specialInstruction code="AAB">
+            <text>45 Días desde fecha factura, neto</text>
+         </specialInstruction>
+         <specialInstruction code="ZZZ">
+            <text>( TREINTA MIL OCHOCIENTOS CINCUENTA Y SEIS DÓLARES Y CERO CENTAVOS USD )</text>
+         </specialInstruction>
+         <specialInstruction code="LGT">
+            <text>MC</text>
+         </specialInstruction>
+         <specialInstruction code="EUM">
+            <text>FACT. C408[#]Ernesto Fl</text>
+         </specialInstruction>
+         <specialInstruction code="REG">
+            <text>Regimen general de Ley</text>
+         </specialInstruction>
+         <specialInstruction code="MNT">
+            <text>V6[#][#]4256</text>
+         </specialInstruction>
+         <specialInstruction code="CON">
+            <text>E[#][#]Gabriela Valero</text>
+         </specialInstruction>
+         <specialInstruction code="CON">
+            <text>R[#][#]Ernesto Flores</text>
+         </specialInstruction>
+         <orderIdentification>
+            <referenceIdentification type="ON">FACT. C40897</referenceIdentification>
+         </orderIdentification>
+         <AdditionalInformation>
+            <referenceIdentification type="DQ">Ernesto Fl</referenceIdentification>
+            <referenceIdentification type="INT">624319</referenceIdentification>
+            <referenceIdentification type="IV">MC4010109</referenceIdentification>
+         </AdditionalInformation>
+         <DeliveryNote>
+            <referenceIdentification>Ernesto Fl</referenceIdentification>
+         </DeliveryNote>
+         <buyer>
+            <gln>0000000000000</gln>
+         </buyer>
+         <InvoiceCreator>
+            <nameAndAddress>
+               <name>Gabriela Valero</name>
+            </nameAndAddress>
+         </InvoiceCreator>
+         <currency currencyISOCode="USD">
+            <currencyFunction>BILLING_CURRENCY</currencyFunction>
+            <rateOfChange>000017.7526000</rateOfChange>
+         </currency>
+         <lineItem number="001" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">CAMID10378-99</alternateTradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">D-210-005-B 4140 HOLDER</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>IRON DIE ASSEMBLY</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">200</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>D-210-005-B 4140 HOLDER</text>
+               <text>D-210-005-B 4140 HOLDER</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>133.00</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>133.00</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>26600.00</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>26600.00</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <totalAmount>
+            <Amount>26600.00</Amount>
+         </totalAmount>
+         <baseAmount>
+            <Amount>26600.00</Amount>
+         </baseAmount>
+         <taxAmount>
+            <Amount>4256.00</Amount>
+         </taxAmount>
+         <tax type="VAT">
+            <taxPercentage>16.00</taxPercentage>
+            <taxAmount>4256.00</taxAmount>
+            <taxCategory>TRANSFERIDO</taxCategory>
+         </tax>
+         <payableAmount>
+            <Amount>30856.00</Amount>
+         </payableAmount>
+      </requestForPayment>
+   </cfdi:Addenda>
+</cfdi:Comprobante>

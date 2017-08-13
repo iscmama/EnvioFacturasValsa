@@ -1,0 +1,116 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    String IdSesion = (String)(Session["IdUsuario"].ToString());
+    Generales Gen = new Generales();
+
+    if (!Gen.EsAdministrador(IdSesion) && !Gen.EsMaster(IdSesion))
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Mapeo de Series";
+
+
+    String Informacion = "";
+
+    GestionCuentas GesCue = new GestionCuentas();
+    
+    if (IsPost)
+    {
+        if(GesCue.ModificarRFC(Request.Form["IdUsuario"], Request.Form["RFC"]))
+        {
+            Response.Redirect("~/GestionarCuentas");
+        }
+        else
+        {
+            Informacion = "Error ocurrido durante la asignación de Series";
+        }
+    }
+
+    List<String> Lista = GesCue.ObtenerRFC((String)(Session["IdUsuario"].ToString()));
+
+    String Nombre = "";
+    String IdUsuario = "";
+    if (!IsPost)
+    {
+        Nombre = Gen.ObtenerNombre(Request.QueryString["Id"]);
+        IdUsuario = Request.QueryString["Id"];
+    }
+    else
+    {
+        Nombre = Gen.ObtenerNombre(Request.Form["IdUsuario"]);
+        IdUsuario = Request.Form["IdUsuario"];
+    }
+
+    String RFCActuales = GesCue.ObtenerRFCActual(IdUsuario);
+}
+
+<div class="page-header"><h1>Configuración de Usuarios <small>Asignar Serie</small></h1></div>
+
+<div class="row">
+    @if (Lista.Count == 0 || RFCActuales == null)
+    {
+        <br />
+        <center style="color: red;">Error ocurrido al obtener información</center>
+    }
+    else
+    {
+        String[] ListaRFC = RFCActuales.Split(',');
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Asignar RFC</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="post">
+                        <center>@Nombre</center>
+                        <br />
+                        <input type="hidden" value="@IdUsuario" name="IdUsuario"/>
+                        @for (int i = 0; i < (Lista.Count / 2); i++)
+                        {
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">@Lista[(i * 2) + 1]</label>
+                                    <div class="col-sm-7">
+                                        <div class="switch-button showcase-switch-button">
+                                            
+                                            @{
+                                                Boolean Esta = false;
+                                                for (int j = 0; j < ListaRFC.Length; j++)
+                                                {
+                                                    if (ListaRFC[j] == @Lista[(i * 2) + 0])
+                                                    {
+                                                        Esta = true;
+                                                    }
+                                                }
+                                                if (Esta)
+                                                {
+                                                    <input id="switch-button-@i" type="checkbox" name="RFC" value="@Lista[(i * 2) + 0]" checked>
+                                                }
+                                                else
+                                                {
+                                                    <input id="switch-button-@i" type="checkbox" name="RFC" value="@Lista[(i * 2) + 0]">
+                                                }
+                                            }
+                                            <label for="switch-button-@i"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <div class="col-md-12">
+                            <br />
+                            <button class="btn btn-primary btn-lg center-block">Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+                            if (Informacion.Length != 0)
+                            {
+            <center style="color: red;">@Informacion</center>
+                            }
+    }
+</div>

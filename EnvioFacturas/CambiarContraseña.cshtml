@@ -1,0 +1,73 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    String IdSesion = (String)(Session["IdUsuario"].ToString());
+    Generales Gen = new Generales();
+
+    if (!Gen.EsAdministrador(IdSesion) && !Gen.EsMaster(IdSesion))
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Cambiar Contraseña";
+
+    String Informacion = "";
+    if (IsPost)
+    {
+        GestionCuentas GesCue = new GestionCuentas();
+        if(GesCue.CambiarContraseña(Request.Form["IdUsuario"], Request.Form["Contraseña"]))
+        {
+            Response.Redirect("~/GestionarCuentas");
+        }
+        else
+        {
+            Informacion = "Error ocurrido al modificar la contraseña";
+        }
+    }
+
+    String Nombre = "";
+    String IdUsuario = "";
+    if (!IsPost)
+    {
+        Nombre = Gen.ObtenerNombre(Request.QueryString["Id"]);
+        IdUsuario = Request.QueryString["Id"];
+    }
+    else
+    {
+        Nombre = Gen.ObtenerNombre(Request.Form["IdUsuario"]);
+        IdUsuario = Request.Form["IdUsuario"];
+    }
+
+}
+
+<div class="page-header"><h1>Configuración de Usuarios <small>Modificación de contraseña</small></h1></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Modificar Contraseña</div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" method="post">
+                    <div class="form-group">
+                        <center>@Nombre</center>
+                        <br />
+                        <label class="col-sm-2 control-label">Nueva Contraseña</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" name="Contraseña" placeholder="Nueva Contraseña">
+                            <input type="hidden" name="IdUsuario" value="@IdUsuario" />
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-lg center-block">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    @if (Informacion.Length != 0)
+    {
+        <center style="color: red;">@Informacion</center>
+    }
+</div>

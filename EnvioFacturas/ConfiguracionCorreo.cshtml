@@ -1,0 +1,127 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    String IdSesion = (String)(Session["IdUsuario"].ToString());
+    Generales Gen = new Generales();
+
+    if (!Gen.EsMaster(IdSesion))
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Configuración de Correo";
+
+
+    String Informacion = "";
+    Correos Cor = new Correos();
+
+    if (IsPost)
+    {
+        List<String> DatosEnviar = new List<String>();
+        DatosEnviar.Add(Request.Form["Correo"]);
+        DatosEnviar.Add(Request.Form["Contraseña"]);
+        DatosEnviar.Add(Request.Form["Host"]);
+        DatosEnviar.Add(Request.Form["Puerto"]);
+        DatosEnviar.Add(Request.Form["SSL"]);
+        DatosEnviar.Add(Request.Form["Texto"]);
+
+        if (Cor.ModificarCorreo(DatosEnviar))
+        {
+            Informacion = "Datos actualizados correctamente";
+        }
+        else
+        {
+            Informacion = "Error ocurrido durante la modificación";
+        }
+    }
+
+    List<String> Lista = Cor.ObtenerInformacion();
+}
+
+<div class="page-header"><h1>Configuración de Correo <small>Configuración de la cuenta de envío</small></h1></div>
+
+<div class="row">
+    @if (Lista.Count == 0)
+    {
+        <br />
+        <center style="color: red;">Error ocurrido al obtener información</center>
+    }
+    else
+    {
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Solicitud</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="post">
+                        <h3 class="label label-primary">Información de la cuenta</h3>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Correo</label>
+                            <div class="col-sm-7">
+                                <input type="email" class="form-control" name="Correo" placeholder="ejemplo@dominio.com" value="@Lista[0]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Contraseña</label>
+                            <div class="col-sm-7">
+                                <input type="password" class="form-control" name="Contraseña" placeholder="Contraseña" value="@Lista[1]">
+                            </div>
+                        </div>
+
+                        <hr class="dotted">
+                        <h3 class="label label-success">Información de servidor</h3>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Host</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="Host" placeholder="smtp.ejemplo.com" value="@Lista[2]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Puerto</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="Puerto" placeholder="Puerto" value="@Lista[3]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">SSL</label>
+                            <div class="col-sm-7">
+                                <div class="switch-button showcase-switch-button">
+                                    @if (Lista[4] == "1")
+                                    {
+                                        <input id="switch-button-1" type="checkbox" name="SSL" checked>
+                                    }
+                                    else
+                                    {
+                                        <input id="switch-button-1" type="checkbox" name="SSL">
+                                    }                                    
+                                    <label for="switch-button-1"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Texto</label>
+                            <div class="col-sm-7">
+                                <textarea rows="4" cols="100%" class="form-control" name="Texto" placeholder="Texto del Correo">@Lista[5]</textarea>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg center-block">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        if (Informacion.Length != 0)
+        {
+            if (Informacion.Equals("Datos actualizados correctamente"))
+            {
+                <center style="color: green;">@Informacion</center>
+            }
+            else
+            {
+                <center style="color: red;">@Informacion</center>
+            }
+        }
+    }    
+</div>

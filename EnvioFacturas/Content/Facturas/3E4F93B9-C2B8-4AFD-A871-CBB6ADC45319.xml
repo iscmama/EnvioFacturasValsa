@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="TLALNEPANTLA, ESTADO DE MEXICO" Moneda="USD" TipoCambio="17.926000" certificado="MIIEkDCCA3igAwIBAgIUMDAwMDEwMDAwMDAyMDEzNDQzODcwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxMzIwNDAwN1oXDTE2MDYxMzIwNDAwN1owgdExIzAhBgNVBAMTGlNBTkRWSUsgREUgTUVYSUNPIFNBIERFIENWMSMwIQYDVQQpExpTQU5EVklLIERFIE1FWElDTyBTQSBERSBDVjEjMCEGA1UEChMaU0FORFZJSyBERSBNRVhJQ08gU0EgREUgQ1YxJTAjBgNVBC0THFNNRTYxMDMxN1RHNiAvIExFTEc3MjA4MjE3RTExHjAcBgNVBAUTFSAvIExFTEc3MjA4MjFITkVEUlMwMjEZMBcGA1UECxMQRVNUQURPIERFIE1FWElDTzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAstNRY9sxbP7qtyArGGNZaxtaVA13Mr9QMJEj5o1yEhCV8kZ+ZgqB8QnOxIdYnUx9UDPd3UBiWHN2qGY/MERv84Rhaqoh3GO6cnT4Eelsz/XowlOhPqVCx319PXGYZPIT5xEQ/tc6I+HerNGzY/TttR/3rnliPZKH/f3LRCuYDr0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAJJLlDYcaj22H+Ricte2F8rf2kTMD7MG2TZGgagoOEdEkOaFMfJizLoQlFGyESwMrtGAfBQQRH6yITkexxbApfYAy1ioN/wsb/KEZQt30VC/R8Zs4IhCF/845Fe/rcoBqoZRYdk+0Roe8gK8Rtph7g31TbKLRnUAUroMlI0beZaV7gm2cCgaAmeY/vMkGFF7GaG31t3f8fVzegqI54Hc35wjCB3jQPSIiBKD815bad18737dvl9OKuDCaWff5K1nNory717zQn9Co1VRd3rgNJhaqnxogdsMN9tUuQrbBa9R+aNbHIO2NGNTK8GmRXlpQo8t8cn4+2U/CwbDiKSr/RE=" fecha="2016-03-17T09:38:09" folio="40921" formaDePago="Pago en una sola exhibicion" metodoDePago="Transferencia" noCertificado="00001000000201344387" sello="o2W8gEXTh1V/5NXB15DVDycFApwpWekfEyKSxvof29tAxngfEJjYPV/XeZyoDrUVDPs72hagk2jjv0ZYzIKNkEdZfS43klFyUXvqNu98521guNxXo5I0qGI/c9hgmhz6GRqkEWnKYg+vbx5tYd+JgVK4BWe9RV4cdywoKgfQrTg=" serie="M" subTotal="49844.67" tipoDeComprobante="ingreso" total="57819.79" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd">
+   <cfdi:Emisor nombre="SANDVIK DE MEXICO SA de CV" rfc="SME610317TG6">
+      <cfdi:DomicilioFiscal calle="VIA GUSTAVO BAZ" codigoPostal="54060" colonia="LA LOMA" estado="ESTADO DE MEXICO" localidad="MEXICO" municipio="TLALNEPANTLA" noExterior="352" pais="MEXICO"/>
+      <cfdi:RegimenFiscal Regimen="Regimen general de Ley"/>
+   </cfdi:Emisor>
+   <cfdi:Receptor nombre="SANDVIK HARD MATERIALS DE MEXICO SA" rfc="SHM121204HL8">
+      <cfdi:Domicilio calle="Via Dr. Gustavo Baz No. 352" colonia="Col. La Loma, Tlanepantla" pais="CP 54060 Estado de Mexico - MEXICO"/>
+   </cfdi:Receptor>
+   <cfdi:Conceptos>
+      <cfdi:Concepto cantidad="4000" descripcion="Indexable insert blanksWZ 560-N862H10F" importe="1960.00" noIdentificacion="WZ 560-N862H10F" unidad="PCE" valorUnitario="0.49"/>
+      <cfdi:Concepto cantidad="53" descripcion="Indexable insert blanksWZ 560-N862H10F" importe="25.97" noIdentificacion="WZ 560-N862H10F" unidad="PCE" valorUnitario="0.49"/>
+      <cfdi:Concepto cantidad="4839" descripcion="Carmex part 50-00-1128WZ 560-N864H10F" importe="2322.72" noIdentificacion="WZ 560-N864H10F" unidad="PCE" valorUnitario="0.48"/>
+      <cfdi:Concepto cantidad="5089" descripcion="Carmex part 50-00-1128WZ 560-N864H10F" importe="2442.72" noIdentificacion="WZ 560-N864H10F" unidad="PCE" valorUnitario="0.48"/>
+      <cfdi:Concepto cantidad="5072" descripcion="Carmex part 50-00-1128WZ 560-N864H10F" importe="2434.56" noIdentificacion="WZ 560-N864H10F" unidad="PCE" valorUnitario="0.48"/>
+      <cfdi:Concepto cantidad="261" descripcion="Carmex part 50-00-1128WZ 560-N864H10F" importe="125.28" noIdentificacion="WZ 560-N864H10F" unidad="PCE" valorUnitario="0.48"/>
+      <cfdi:Concepto cantidad="5.9" descripcion="DBI0591181H10FA" importe="1692.30" noIdentificacion="DBI0591181H10FA" unidad="THO" valorUnitario="286.83"/>
+      <cfdi:Concepto cantidad="5.162" descripcion="Indexable insert blanksWZ 560-N777H10F" importe="2205.05" noIdentificacion="WZ 560-N777H10F" unidad="THO" valorUnitario="427.17"/>
+      <cfdi:Concepto cantidad="4.838" descripcion="Indexable insert blanksWZ 560-N777H10F" importe="2066.65" noIdentificacion="WZ 560-N777H10F" unidad="THO" valorUnitario="427.17"/>
+      <cfdi:Concepto cantidad="0.379" descripcion="Indexable insert blanksWZ 560-N777H10F" importe="161.90" noIdentificacion="WZ 560-N777H10F" unidad="THO" valorUnitario="427.17"/>
+      <cfdi:Concepto cantidad="1000" descripcion="Mining drill blanksODCC127192-0H6N" importe="2330.00" noIdentificacion="ODCC127192-0H6N" unidad="PCE" valorUnitario="2.33"/>
+      <cfdi:Concepto cantidad="5" descripcion="Mining drill blanksODCC127192-0H6N" importe="11.65" noIdentificacion="ODCC127192-0H6N" unidad="PCE" valorUnitario="2.33"/>
+      <cfdi:Concepto cantidad="20" descripcion="Bio medical rod blanksRDBS05-140H10F" importe="1247.00" noIdentificacion="RDBS05-140H10F" unidad="THO" valorUnitario="62.35"/>
+      <cfdi:Concepto cantidad="0.68" descripcion="Bio medical rod blanksRDBS05-140H10F" importe="42.40" noIdentificacion="RDBS05-140H10F" unidad="THO" valorUnitario="62.35"/>
+      <cfdi:Concepto cantidad="18.718" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="1904.37" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="20.321" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="2067.46" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="20.813" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="2117.51" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="20.36" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="2071.43" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="21.226" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="2159.53" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="21.26" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="2162.99" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="20.715" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="2107.54" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="21.304" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="2167.47" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="21.06" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="2142.64" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="14.223" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="1447.05" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="6.857" descripcion="Bio medical rod blanksRDBS00-022H10F" importe="697.63" noIdentificacion="RDBS00-022H10F" unidad="THO" valorUnitario="101.74"/>
+      <cfdi:Concepto cantidad="15.36" descripcion="Bio medical rod blanksRDBS05-020H10F" importe="898.56" noIdentificacion="RDBS05-020H10F" unidad="THO" valorUnitario="58.50"/>
+      <cfdi:Concepto cantidad="14.64" descripcion="Bio medical rod blanksRDBS05-020H10F" importe="856.44" noIdentificacion="RDBS05-020H10F" unidad="THO" valorUnitario="58.50"/>
+      <cfdi:Concepto cantidad="1.54" descripcion="Bio medical rod blanksRDBS05-020H10F" importe="90.09" noIdentificacion="RDBS05-020H10F" unidad="THO" valorUnitario="58.50"/>
+      <cfdi:Concepto cantidad="46" descripcion="Oil drilling blanksODPJ016-K0-286" importe="282.44" noIdentificacion="ODPJ016-K0-286" unidad="PCE" valorUnitario="6.14"/>
+      <cfdi:Concepto cantidad="46" descripcion="Oil drilling blanksODPJ455-K0-286" importe="250.24" noIdentificacion="ODPJ455-K0-286" unidad="PCE" valorUnitario="5.44"/>
+      <cfdi:Concepto cantidad="212" descripcion="Oil drilling blanksODPD861-K0-286" importe="1028.20" noIdentificacion="ODPD861-K0-286" unidad="PCE" valorUnitario="4.85"/>
+      <cfdi:Concepto cantidad="52" descripcion="Oil drilling blanksODPD862-K0-286" importe="268.84" noIdentificacion="ODPD862-K0-286" unidad="PCE" valorUnitario="5.17"/>
+      <cfdi:Concepto cantidad="60" descripcion="Oil drilling blanksODPD863-K0-286" importe="285.00" noIdentificacion="ODPD863-K0-286" unidad="PCE" valorUnitario="4.75"/>
+      <cfdi:Concepto cantidad="234" descripcion="Oil drilling blanksODNW050-0-286" importe="1411.02" noIdentificacion="ODNW050-0-286" unidad="PCE" valorUnitario="6.03"/>
+      <cfdi:Concepto cantidad="20" descripcion="Dental burr blanksRDBS00-035H10F" importe="2400.00" noIdentificacion="RDBS00-035H10F" unidad="THO" valorUnitario="120.00"/>
+      <cfdi:Concepto cantidad="0.665" descripcion="Dental burr blanksRDBS00-035H10F" importe="79.80" noIdentificacion="RDBS00-035H10F" unidad="THO" valorUnitario="120.00"/>
+      <cfdi:Concepto cantidad="10.34" descripcion="Bio medical rod blanksRDBS05-080H10F" importe="621.33" noIdentificacion="RDBS05-080H10F" unidad="THO" valorUnitario="60.09"/>
+      <cfdi:Concepto cantidad="10.36" descripcion="Bio medical rod blanksRDBS05-080H10F" importe="622.53" noIdentificacion="RDBS05-080H10F" unidad="THO" valorUnitario="60.09"/>
+      <cfdi:Concepto cantidad="9.3" descripcion="Bio medical rod blanksRDBS05-080H10F" importe="558.84" noIdentificacion="RDBS05-080H10F" unidad="THO" valorUnitario="60.09"/>
+      <cfdi:Concepto cantidad="1.29" descripcion="Bio medical rod blanksRDBS05-080H10F" importe="77.52" noIdentificacion="RDBS05-080H10F" unidad="THO" valorUnitario="60.09"/>
+   </cfdi:Conceptos>
+   <cfdi:Impuestos totalImpuestosTrasladados="7975.12">
+      <cfdi:Traslados>
+         <cfdi:Traslado importe="7975.12" impuesto="IVA" tasa="16.00"/>
+      </cfdi:Traslados>
+   </cfdi:Impuestos>
+   <cfdi:Complemento>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2016-03-17T09:38:11" UUID="3E4F93B9-C2B8-4AFD-A871-CBB6ADC45319" noCertificadoSAT="00001000000203631919" selloCFD="o2W8gEXTh1V/5NXB15DVDycFApwpWekfEyKSxvof29tAxngfEJjYPV/XeZyoDrUVDPs72hagk2jjv0ZYzIKNkEdZfS43klFyUXvqNu98521guNxXo5I0qGI/c9hgmhz6GRqkEWnKYg+vbx5tYd+JgVK4BWe9RV4cdywoKgfQrTg=" selloSAT="QZXOax0xxtCQcMSx0hjsoISdeLgG3hg7Pn4UmcDPirUy+rAt+eRYsxKBL0gz0uEdc0oKjh1y/20vb2iyLyl2IUxJKwR9C2lWiujS7sqIo6pRfH8C0yj2fA7NK2SuCjyb70BqiGiNQPfSb+yxibvbZjM+g2UdJ+zjZ/JXZocLUnU=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+</cfdi:Complemento>
+<cfdi:Addenda>
+      <requestForPayment DeliveryDate="2016-03-17" contentVersion="1.3.1" documentStatus="ORIGINAL" documentStructureVersion="AMC7.1" type="SimpleInvoiceType">
+         <requestForPaymentIdentification>
+            <entityType>INVOICE</entityType>
+            <uniqueCreatorIdentification>M40921-160317093809</uniqueCreatorIdentification>
+         </requestForPaymentIdentification>
+         <specialInstruction code="ZZZ">
+            <text>( CINCUENTA Y SIETE MIL OCHOCIENTOS DIECINUEVE DÓLARES Y SETENTA Y NUEVE CENTAVOS USD )</text>
+         </specialInstruction>
+         <specialInstruction code="LGT">
+            <text>M</text>
+         </specialInstruction>
+         <specialInstruction code="REG">
+            <text>Regimen general de Ley</text>
+         </specialInstruction>
+         <specialInstruction code="MNT">
+            <text>V6</text>
+         </specialInstruction>
+         <AdditionalInformation>
+            <referenceIdentification type="IV">M40921</referenceIdentification>
+         </AdditionalInformation>
+         <buyer>
+            <gln>0000000000000</gln>
+         </buyer>
+         <currency currencyISOCode="USD">
+            <currencyFunction>BILLING_CURRENCY</currencyFunction>
+            <rateOfChange>000017.9260000</rateOfChange>
+         </currency>
+         <lineItem number="001" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N862H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Indexable insert blanksWZ 560-N862H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">4000</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Indexable insert blanks</text>
+               <text>265942</text>
+               <text>560009130N862H10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.49</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.49</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1960.00</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1960.00</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="002" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N862H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Indexable insert blanksWZ 560-N862H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">53</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Indexable insert blanks</text>
+               <text>265942</text>
+               <text>560009130N862H10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.49</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.49</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>25.97</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>25.97</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="003" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N864H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Carmex part 50-00-1128WZ 560-N864H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">4839</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Carmex part 50-00-1128</text>
+               <text>265944</text>
+               <text>560009130N864H10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.48</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.48</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2322.72</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2322.72</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="004" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N864H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Carmex part 50-00-1128WZ 560-N864H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">5089</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Carmex part 50-00-1128</text>
+               <text>265944</text>
+               <text>560009130N864H10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.48</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.48</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2442.72</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2442.72</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="005" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N864H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Carmex part 50-00-1128WZ 560-N864H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">5072</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Carmex part 50-00-1128</text>
+               <text>265944</text>
+               <text>560009130N864H10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.48</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.48</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2434.56</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2434.56</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="006" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N864H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Carmex part 50-00-1128WZ 560-N864H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">261</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Carmex part 50-00-1128</text>
+               <text>265944</text>
+               <text>560009130N864H10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>0.48</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>0.48</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>125.28</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>125.28</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="007" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">DBI0591181H10FA</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>DBI0591181H10FA</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">5.9</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>267010</text>
+               <text>1374416 DBI0591181H10FA</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>286.83</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>286.83</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1692.30</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1692.30</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="008" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N777H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Indexable insert blanksWZ 560-N777H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">5.162</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Indexable insert blanks</text>
+               <text>269523</text>
+               <text>560009130N777H10F GROUND</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>427.17</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>427.17</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2205.05</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2205.05</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="009" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N777H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Indexable insert blanksWZ 560-N777H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">4.838</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Indexable insert blanks</text>
+               <text>269523</text>
+               <text>560009130N777H10F GROUND</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>427.17</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>427.17</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2066.65</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2066.65</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="010" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">WZ 560-N777H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Indexable insert blanksWZ 560-N777H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">0.379</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Indexable insert blanks</text>
+               <text>269523</text>
+               <text>560009130N777H10F GROUND</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>427.17</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>427.17</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>161.90</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>161.90</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="011" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">ODCC127192-0H6N</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Mining drill blanksODCC127192-0H6N</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">1000</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Mining drill blanks</text>
+               <text>270699</text>
+               <text>CC127192-0-H6N</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>2.33</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>2.33</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2330.00</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2330.00</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="012" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">ODCC127192-0H6N</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Mining drill blanksODCC127192-0H6N</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">5</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Mining drill blanks</text>
+               <text>270699</text>
+               <text>CC127192-0-H6N</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>2.33</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>2.33</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>11.65</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>11.65</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="013" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-140H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-140H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">20</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271181</text>
+               <text>RD BS 0260 0051 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>62.35</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>62.35</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1247.00</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1247.00</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="014" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-140H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-140H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">0.68</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271181</text>
+               <text>RD BS 0260 0051 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>62.35</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>62.35</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>42.40</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>42.40</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="015" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">18.718</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1904.37</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1904.37</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="016" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">20.321</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2067.46</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2067.46</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="017" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">20.813</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2117.51</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2117.51</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="018" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">20.36</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2071.43</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2071.43</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="019" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">21.226</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2159.53</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2159.53</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="020" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">21.26</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2162.99</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2162.99</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="021" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">20.715</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2107.54</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2107.54</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="022" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">21.304</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2167.47</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2167.47</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="023" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">21.06</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2142.64</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2142.64</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="024" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">14.223</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1447.05</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1447.05</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="025" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-022H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS00-022H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">6.857</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271370</text>
+               <text>RD BS 01599 01905 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>101.74</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>101.74</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>697.63</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>697.63</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="026" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-020H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-020H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">15.36</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271807</text>
+               <text>RD BS 0170 0067 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>58.50</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>58.50</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>898.56</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>898.56</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="027" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-020H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-020H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">14.64</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271807</text>
+               <text>RD BS 0170 0067 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>58.50</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>58.50</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>856.44</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>856.44</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="028" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-020H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-020H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">1.54</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>271807</text>
+               <text>RD BS 0170 0067 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>58.50</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>58.50</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>90.09</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>90.09</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="029" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">ODPJ016-K0-286</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Oil drilling blanksODPJ016-K0-286</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">46</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Oil drilling blanks</text>
+               <text>272180</text>
+               <text>TPJ016</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>6.14</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>6.14</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>282.44</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>282.44</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="030" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">ODPJ455-K0-286</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Oil drilling blanksODPJ455-K0-286</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">46</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Oil drilling blanks</text>
+               <text>272181</text>
+               <text>TPJ455</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>5.44</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>5.44</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>250.24</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>250.24</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="031" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">ODPD861-K0-286</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Oil drilling blanksODPD861-K0-286</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">212</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Oil drilling blanks</text>
+               <text>272183</text>
+               <text>TPD861</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>4.85</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>4.85</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1028.20</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1028.20</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="032" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">ODPD862-K0-286</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Oil drilling blanksODPD862-K0-286</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">52</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Oil drilling blanks</text>
+               <text>272183</text>
+               <text>TPD862</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>5.17</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>5.17</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>268.84</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>268.84</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="033" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">ODPD863-K0-286</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Oil drilling blanksODPD863-K0-286</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">60</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Oil drilling blanks</text>
+               <text>272185</text>
+               <text>TPD863</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>4.75</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>4.75</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>285.00</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>285.00</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="034" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">ODNW050-0-286</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Oil drilling blanksODNW050-0-286</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="PCE">234</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Oil drilling blanks</text>
+               <text>272187</text>
+               <text>TNW050</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>6.03</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>6.03</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1411.02</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1411.02</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="035" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-035H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Dental burr blanksRDBS00-035H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">20</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Dental burr blanks</text>
+               <text>272396</text>
+               <text>RD BS 01599 02505 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>120.00</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>120.00</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2400.00</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2400.00</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="036" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS00-035H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Dental burr blanksRDBS00-035H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">0.665</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Dental burr blanks</text>
+               <text>272396</text>
+               <text>RD BS 01599 02505 5LH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>120.00</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>120.00</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>79.80</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>79.80</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="037" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-080H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-080H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">10.34</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>272414</text>
+               <text>RD BS 0220 0051 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>60.09</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>60.09</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>621.33</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>621.33</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="038" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-080H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-080H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">10.36</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>272414</text>
+               <text>RD BS 0220 0051 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>60.09</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>60.09</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>622.53</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>622.53</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="039" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-080H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-080H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">9.3</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>272414</text>
+               <text>RD BS 0220 0051 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>60.09</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>60.09</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>558.84</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>558.84</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="040" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="BUYER_ASSIGNED">RDBS05-080H10F</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>Bio medical rod blanksRDBS05-080H10F</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">1.29</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>Bio medical rod blanks</text>
+               <text>272414</text>
+               <text>RD BS 0220 0051 EPH10F</text>
+            </specialInstruction>
+            <grossPrice>
+               <Amount>60.09</Amount>
+            </grossPrice>
+            <netPrice>
+               <Amount>60.09</Amount>
+            </netPrice>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>77.52</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>77.52</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <totalAmount>
+            <Amount>49844.67</Amount>
+         </totalAmount>
+         <baseAmount>
+            <Amount>49844.67</Amount>
+         </baseAmount>
+         <taxAmount>
+            <Amount>7975.12</Amount>
+         </taxAmount>
+         <tax type="VAT">
+            <taxPercentage>16.00</taxPercentage>
+            <taxAmount>7975.12</taxAmount>
+            <taxCategory>TRANSFERIDO</taxCategory>
+         </tax>
+         <payableAmount>
+            <Amount>57819.79</Amount>
+         </payableAmount>
+      </requestForPayment>
+   </cfdi:Addenda>
+</cfdi:Comprobante>

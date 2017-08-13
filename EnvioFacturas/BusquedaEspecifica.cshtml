@@ -1,0 +1,801 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    Generales Gen = new Generales();
+    Facturas Fac = new Facturas();
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Búsqueda Específica";
+
+
+    String Inicio = "";
+    String Fin = "";
+    String Serie = "";
+    String Folio = "";
+    String TipoComprobante = "INGRESO";
+    String Receptor = "0";
+    String Status = "";
+    String Pais = "";
+
+    if (IsPost && Request["btnBuscar"] != null)
+    {
+        Serie = Request.Form["Serie"] == null ? string.Empty : Request.Form["Serie"];
+        Folio = Request.Form["Folio"] == null ? string.Empty : Request.Form["Folio"];
+        Inicio = Request.Form["Desde"] == null ? string.Empty : Request.Form["Desde"];
+        Fin = Request.Form["Hasta"] == null ? string.Empty : Request.Form["Hasta"];
+        TipoComprobante = Request.Form["TipoComprobante"] == null ? string.Empty : Request.Form["TipoComprobante"];
+        Receptor = Request.Form["Receptor"] == null ? string.Empty : Request.Form["Receptor"];
+        Status = Request.Form["Status"] == null ? string.Empty : Request.Form["Status"];
+        Pais = Request.Form["Pais"] == null ? string.Empty : Request.Form["Pais"];
+    }
+    else
+    {
+        //Asigno fecha inicial
+        if (Session["Data"] == null)
+        {
+            Inicio = Fac.FechaInicial();
+        }
+        else
+        {
+            DatosEnviar datos = (DatosEnviar)Session["Data"];
+            Inicio = datos.Inicio;
+        }
+    }
+
+    String IdUsuario = "";
+
+    try
+    {
+        IdUsuario = (String)(Session["IdUsuario"].ToString());
+    }
+    catch
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Clientes Clie = new Clientes();
+    List<ObjetoClientes> ListaRFC = Clie.ObtenerResultados(IdUsuario);
+    List<String> ListaSerie = Clie.ObtenerSeries(IdUsuario);
+
+
+    List<String> ListaTipos = Fac.DistintosTiposComprobantes();
+    List<String> ListaStatus = Fac.DistintosStatus();
+    List<String> ListaPaises = Fac.DistintosPaises();
+}
+
+<style type="text/css" media="screen">
+    /* Example 2 (login form) */
+    .login_form.modal {
+        line-height: 18px;
+        padding: 0;
+        font-family: "Lucida Grande", Verdana, sans-serif;
+        width: 350px;
+        height: 200px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       }
+
+    .login_form h3 {
+        margin: 0;
+        padding: 10px;
+        color: #fff;
+        font-size: 14px;
+        width: 350px;
+    }
+
+    .login_form.modal p {
+        padding: 20px 30px;
+        border-bottom: 1px solid #ddd;
+        margin: 0;
+    }
+
+        .login_form.modal p:last-child {
+            border: none;
+        }
+
+        .login_form.modal p label {
+            float: left;
+            font-weight: bold;
+            color: #000;
+            font-size: 13px;
+            width: 350px;
+            line-height: 22px;
+        }
+
+        .login_form.modal p input[type="text"],
+        .login_form.modal p input[type="password"] {
+            font: normal 12px/18px "Lucida Grande", Verdana;
+            padding: 3px;
+            border: 1px solid #ddd;
+            width: 200px;
+        }
+
+    .modal-backdrop {
+        z-index: 0;
+        background-color: #000;
+    }
+</style>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" method="post" name="BuscarForm">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">Serie</label>
+                        <div class="col-sm-2">
+                            <select class="form-control chosen-select" data-placeholder="Serie" name="Serie" required>
+                                <option></option>
+                                @if (Serie.Trim().Length == 0)
+                                {
+                                    <option value=" " selected>TODAS</option>
+                                }
+                                else
+                                {
+                                    <option value=" ">TODAS</option>
+                                }
+
+                                @if (ListaSerie.Count != 0)
+                                {
+                                    for (int i = 0; i < ListaSerie.Count; i++)
+                                    {
+                                        if (Serie.Length != 0)
+                                        {
+                                            if (Serie == ListaSerie[i])
+                                            {
+                                                <option value="@ListaSerie[i]" selected>@ListaSerie[i]</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@ListaSerie[i]">@ListaSerie[i]</option>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <option value="@ListaSerie[i]">@ListaSerie[i]</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <label class="col-sm-1 control-label">Folio</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="Folio" placeholder="Folio" value="@Folio">
+                        </div>
+                        <label class="col-sm-2 control-label">Tipo Comprobante</label>
+                        <div class="col-sm-2">
+                            <select class="form-control chosen-select" data-placeholder="Tipo Comprobante" name="TipoComprobante" required>
+                                <option></option>
+                                @if (TipoComprobante != "0")
+                                {
+                                    <option value="0">TODOS</option>
+                                }
+                                else
+                                {
+                                    <option value="0" selected>TODOS</option>
+                                }
+                                <!--AQUI HAGO UN FOR-->
+                                @if (ListaTipos.Count != 0)
+                                {
+                                    for (int i = 0; i < ListaTipos.Count; i++)
+                                    {
+                                        if (TipoComprobante != "0")
+                                        {
+                                            if (TipoComprobante == ListaTipos[i])
+                                            {
+                                                <option value="@ListaTipos[i]" selected>@ListaTipos[i]</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@ListaTipos[i]">@ListaTipos[i]</option>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <option value="@ListaTipos[i]">@ListaTipos[i]</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">Desde</label>
+                        <div class="col-sm-2">
+                            <input type='text' class="form-control" id='datetimepicker4' name="Desde" placeholder="Desde" value="@Inicio" />
+                            <script>
+                                $(function () {
+                                    $("#datetimepicker4").datepicker({ dateFormat: 'yy-mm-dd' });
+                                });
+                            </script>
+                        </div>
+                        <label class="col-sm-1 control-label">Hasta</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id='datetimepicker3' name="Hasta" placeholder="Hasta" value="@Fin">
+                            <script>
+                                $(function () {
+                                    $("#datetimepicker3").datepicker({ dateFormat: 'yy-mm-dd' });
+                                });
+                            </script>
+                        </div>
+                        <label class="col-sm-2 control-label">Receptor</label>
+                        <div class="col-sm-4">
+                            <select class="form-control chosen-select" data-placeholder="Receptor" name="Receptor" required>
+                                <option></option>
+                                @if (Receptor != "0")
+                                {
+                                    <option value="0">TODOS</option>
+                                }
+                                else
+                                {
+                                    <option value="0" selected>TODOS</option>
+                                }
+
+                                @if (ListaRFC != null)
+                                {
+                                    foreach (ObjetoClientes ObjCli in ListaRFC)
+                                    {
+                                        if (Receptor != "0")
+                                        {
+                                            if (Receptor == ObjCli.RazonSocial)
+                                            {
+                                                <option value="@ObjCli.RazonSocial" selected>@ObjCli.RazonSocial - @ObjCli.RFC</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@ObjCli.RazonSocial">@ObjCli.RazonSocial - @ObjCli.RFC</option>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <option value="@ObjCli.RazonSocial">@ObjCli.RazonSocial - @ObjCli.RFC</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">Status</label>
+                        <div class="col-sm-2">
+                            <select class="form-control chosen-select" data-placeholder="Status" name="Status" required>
+                                <option></option>
+                                @if (Status.Trim().Length == 0)
+                                {
+                                    <option value=" " selected>TODOS</option>
+                                }
+                                else
+                                {
+                                    <option value=" ">TODOS</option>
+                                }
+
+                                @if (ListaStatus.Count != 0)
+                                {
+                                    for (int i = 0; i < ListaStatus.Count; i++)
+                                    {
+                                        if (Status.Length != 0)
+                                        {
+                                            if (Status == ListaStatus[i])
+                                            {
+                                                <option value="@ListaStatus[i]" selected>@ListaStatus[i]</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@ListaStatus[i]">@ListaStatus[i]</option>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <option value="@ListaStatus[i]">@ListaStatus[i]</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <label class="col-sm-1 control-label">País</label>
+                        <div class="col-sm-2">
+                            <select class="form-control chosen-select" data-placeholder="País" name="Pais" required>
+                                <option></option>
+                                @if (Pais.Trim().Length == 0)
+                                {
+                                    <option value=" " selected>TODOS</option>
+                                }
+                                else
+                                {
+                                    <option value=" ">TODOS</option>
+                                }
+
+                                @if (ListaPaises.Count != 0)
+                                {
+                                    for (int i = 0; i < ListaPaises.Count; i++)
+                                    {
+                                        if (Pais.Length != 0)
+                                        {
+                                            if (Pais == ListaPaises[i])
+                                            {
+                                                <option value="@ListaPaises[i]" selected>@ListaPaises[i]</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@ListaPaises[i]">@ListaPaises[i]</option>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <option value="@ListaPaises[i]">@ListaPaises[i]</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <button class="btn btn-primary btn-lg center-block" name="btnBuscar" value="Buscar" id="btnBuscar">Buscar</button>
+                    <br />
+                    <br />
+                    <br />
+                  
+                </form>
+
+
+                @if ((IsPost && Request["btnBuscar"] != null) || Session["Data"] != null)
+                {
+                    DatosEnviar Dat = new DatosEnviar();
+
+                    if (Session["Data"] != null && Request.QueryString["reload"] != null)
+                    {
+                        Dat = (DatosEnviar)Session["Data"];
+
+                        if (Request["btnBuscar"] != null)
+                        {
+                            Serie = Request.Form["Serie"] == null ? string.Empty : Request.Form["Serie"];
+                            Folio = Request.Form["Folio"] == null ? string.Empty : Request.Form["Folio"];
+                            Inicio = Request.Form["Desde"] == null ? string.Empty : Request.Form["Desde"];
+                            Fin = Request.Form["Hasta"] == null ? string.Empty : Request.Form["Hasta"];
+                            TipoComprobante = Request.Form["TipoComprobante"] == null ? string.Empty : Request.Form["TipoComprobante"];
+                            Receptor = Request.Form["Receptor"] == null ? string.Empty : Request.Form["Receptor"];
+                            Status = Request.Form["Status"] == null ? string.Empty : Request.Form["Status"];
+                            Pais = Request.Form["Pais"] == null ? string.Empty : Request.Form["Pais"];
+
+                            Dat.Serie = Serie;
+                            Dat.Folio = Folio;
+                            Dat.TipoComprobante = TipoComprobante;
+                            Dat.Inicio = Inicio.Replace("-", "");
+                            Dat.Fin = Fin.Replace("-", "");
+                            Dat.Receptor = Receptor;
+                            Dat.Status = Status;
+                            Dat.Pais = Pais;
+
+                            Session["Data"] = Dat;
+                        }
+                    }
+                    else
+                    {
+                        Dat.Serie = Serie;
+                        Dat.Folio = Folio;
+                        Dat.TipoComprobante = TipoComprobante;
+                        Dat.Inicio = Inicio.Replace("-", "");
+                        Dat.Fin = Fin.Replace("-", "");
+                        Dat.Receptor = Receptor;
+                        Dat.Status = Status;
+                        Dat.Pais = Pais;
+
+                        Session["Data"] = Dat;
+                    }
+
+                    List<ObjetoFactura> Lista = Fac.ObtenerResultadosEspecificos(Dat, IdUsuario);
+
+                    if (Lista.Count != 0)
+                    {
+                        <div class="col-md-6">
+                            <form class="form-horizontal" role="form" action="CrearReporte" method="post">
+                                <!--Serie-->
+                                <input type="hidden" class="form-control" name="Serie" placeholder="Serie" value="@Serie" readonly>
+                                <!--Folio-->
+                                <input type="hidden" class="form-control" name="Folio" placeholder="Folio" value="@Folio" readonly>
+                                <!--Tipo comprobante-->
+                                <input type="hidden" class="form-control" name="TipoComprobante" placeholder="TipoComprobante" value="@TipoComprobante" readonly>
+                                <!--Inicio-->
+                                <input type="hidden" class="form-control" name="Desde" placeholder="Desde" value="@Inicio" readonly>
+                                <!--Fin-->
+                                <input type="hidden" class="form-control" name="Hasta" placeholder="Hasta" value="@Fin" readonly>
+                                <!--Receptor-->
+                                <input type="hidden" class="form-control" name="Receptor" placeholder="Receptor" value="@Receptor" readonly>
+                                <!--Status-->
+                                <input type="hidden" class="form-control" name="Status" placeholder="Pais" value="@Status" readonly>
+                                <!--Pais-->
+                                <input type="hidden" class="form-control" name="Pais" placeholder="Pais" value="@Pais" readonly>
+
+                                <button class="btn btn-success btn-lg center-block">Exportar CSV</button>
+                                <br />
+                            </form>
+                        </div>
+                    }
+
+                    <form method="post" action="DescargarZip" target="_blank">
+                        @if (Lista.Count != 0)
+                        {
+                            <div class="col-md-6">
+                                <button class="btn btn-success btn-lg center-block">Descargar ZIP</button>
+                            </div>
+                        }
+                        <br />
+                        <hr class="dotted">
+                        <br />
+                        <div class="col-md-12" style="overflow-x: auto;">
+                            <table id="example" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input id="allck" type="checkbox" name="Todos" onclick="Checar();" />
+                                        </th>
+                                        <th>Status</th>
+                                        <th>Emisor</th>
+                                        <th>Receptor</th>
+                                        <th>Numero Cliente</th>
+                                        <th>Serie</th>
+                                        <th>Folio</th>
+                                        <th>Tipo Comprobante</th>
+                                        <th>Fecha Emisión</th>
+                                        <th>Moneda</th>
+                                        <th>Total</th>
+                                        <th>País</th>
+                                        <th>Nota</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ObjetoFactura ObjFac in Lista)
+                                    {
+                                        List<ObjetoAcuse> ListaAcuses = Fac.ListarAcuses(ObjFac.IdFactura);
+                                        String Color = "#E6E6E6"; //Gris
+                                        if (ObjFac.Enviada == 1)
+                                        {
+                                            Color = "#FFFF00"; //Amarillo
+                                        }
+                                        if (ListaAcuses != null)
+                                        {
+                                            if (ListaAcuses.Count > 0)
+                                            {
+                                                Color = "#2CCB00";
+                                            }
+                                        }
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <input id="checa" type="checkbox" name="IdFactura" value="@ObjFac.IdFactura" />
+                                            </td>
+                                            <td style="text-align: center; vertical-align: middle; color: @Color;"><i class="fa fa-circle" aria-hidden="true"></i></td>
+                                            <td>@ObjFac.Emisor</td>
+                                            <td>@ObjFac.RazonSocial</td>
+                                            <td>@ObjFac.NumeroCliente</td>
+                                            <td style="text-align:center;">@ObjFac.Serie</td>
+                                            <td style="text-align:center;">@ObjFac.Folio</td>
+                                            <td style="text-align:center;">@ObjFac.TipoComprobante</td>
+                                            <td>@ObjFac.FechaEmision</td>
+                                            <td>@ObjFac.Moneda</td>
+                                            <td style="text-align: right;">@String.Format("{0:C}", Convert.ToDecimal(ObjFac.Total))</td>
+
+
+                                            <td style="text-align:center;">@ObjFac.Pais</td>
+
+                                            @if (ObjFac.Nota.Length == 0)
+                                            {
+                                                <td style="text-align: center;">
+                                                    <a href="NotaFactura?IdFactura=@ObjFac.IdFactura&keepThis=true&TB_iframe=true&height=230&width=650" title="Configuración de Nota" class="thickbox"><i class="fa fa-file-o"></i></a>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td style="text-align: center;">
+                                                    <a href="NotaFactura?IdFactura=@ObjFac.IdFactura&keepThis=true&TB_iframe=true&height=230&width=650" title="Configuración de Nota" class="thickbox"><i class="fa fa-file-text-o"></i></a>
+
+                                                </td>
+                                            }
+
+
+                                            <td>
+                                                <div class="dropdown user-login">
+                                                    <button id="dialogo" class="btn btn-xs dropdown-toggle btn-rounded btn-block" style="background-color: transparent !important;" type="button" data-toggle="dropdown" aria-expanded="true">
+                                                        Seleccione Acción a Realizar <i class="fa fa-angle-down"> </i>
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu" aria-labelledby="@ObjFac.IdFactura">
+
+                                                        @if (Fac.HayCorreo(ObjFac.IdCliente, ObjFac.NumeroCliente))
+                                                        {
+                                                            <li role="presentation"><a role="menuitem" href="~/EnviarCorreo?IdFactura=@ObjFac.IdFactura"><i class="fa fa-send"></i> Reenviar</a></li>
+                                                        }
+                                                        <li role="presentation"><a role="menuitem" href="~/CorreosClientes?IdCliente=@ObjFac.IdCliente&Numero=@ObjFac.NumeroCliente"><i class="fa fa-envelope"></i> Configurar Correos</a></li>
+                                                        <li role="presentation"><a role="menuitem" target="_blank" href="~/Mostrar?IdFactura=@ObjFac.IdFactura&Tipo=PDF"><i class="fa fa-file-pdf-o"></i> Ver PDF</a></li>
+                                                        <li role="presentation"><a role="menuitem" target="_blank" href="~/Mostrar?IdFactura=@ObjFac.IdFactura&Tipo=XML"><i class="fa fa-file-code-o"></i> Ver XML</a></li>
+                                                        @if (true)
+                                                        {
+                                                            foreach (ObjetoAcuse ObjAcu in ListaAcuses)
+                                                            {
+                                                                String Ruta = "/Acuse/" + ObjAcu.Archivo;
+                                                                <li role="presentation"><a role="menuitem" target="_blank" href="@Ruta"><i class="fa fa-file-o"></i> Ver Acuse @ObjAcu.Numero</a></li>
+                                                            }
+                                                            if (ListaAcuses != null)
+                                                            {
+                                                                if (ListaAcuses.Count != 2 && ObjFac.Enviada == 1)
+                                                                {
+                                                                    <li role="presentation"><a role="menuitem" href="javascript:modalSubir(@ObjFac.IdFactura)"><i class="fa fa-upload"></i> Subir Acuse</a></li>
+                                                                }
+                                                            }
+                                                        }
+                                                        @if (Gen.EsMaster(IdUsuario) || Gen.EsAdministrador(IdUsuario))
+                                                        {
+                                                            foreach (ObjetoAcuse ObjAcu in ListaAcuses)
+                                                            {
+                                                                String Ruta = "/Acuse/" + ObjAcu.Archivo;
+                                                                <li role="presentation"><a role="menuitem" href="javascript:eliminarAcuse(@ObjFac.IdFactura, @ObjAcu.Numero)"><i class="fa fa-trash"></i> Eliminar Acuse @ObjAcu.Numero</a></li>
+                                                            }
+                                                        }
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                            <script>
+                                function Checar() {
+                                    if (document.getElementById('allck').checked) {
+                                        $("input[id*='checa']").each(function (i, el) {
+                                            $(this).prop("checked", true);
+                                        });
+                                    }
+                                    else {
+                                        $("input[id*='checa']").each(function (i, el) {
+                                            $(this).prop("checked", false);
+                                        });
+                                    }
+                                }
+
+                                function modalSubir(IdFactura) {
+                                    document.getElementById("Factura").value = IdFactura;
+                                    $('#modal-Subir').modal();
+                                }
+                                function cerrarModal() {
+                                    $.modal.close();
+                                }
+
+                                function eliminarAcuse(FacturaNumero, Numero) {
+
+                                    var respuesta = confirm("¿Esta seguro de eliminar este acuse?");
+
+                                    if (respuesta == true) {
+                                        document.getElementById("FacturaNumero").value = FacturaNumero;
+                                        document.getElementById("Numero").value = Numero;
+                                        document.getElementById("btnEliminar").click();
+                                    }
+                                }
+                            </script>
+                            <script src="~/Scripts/datatable/jquery.dataTables.min.js"></script>
+                            <script>
+                                $(function () {
+                                    $('#example').DataTable({
+                                        stateSave: true
+                                    });
+                                })
+                            </script>
+                        </div>
+                    </form>
+                                            }
+                                            else
+                                            {
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/chosen/chosen.jquery.js"></script>
+
+
+@{
+    String Error = "";
+    String IdFactura = Request.Form["Factura"];
+
+    if (IsPost && Request["btnSubir"] != null && !string.IsNullOrEmpty(IdFactura))
+    {
+        try
+        {
+            Random obj = new Random();
+            string posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            int longitud = posibles.Length;
+            char letra;
+            int longitudnuevacadena = 15;
+            string nuevacadena = "";
+            for (int i = 0; i < longitudnuevacadena; i++)
+            {
+                letra = posibles[obj.Next(longitud)];
+                nuevacadena += letra.ToString();
+            }
+
+            var file = Request.Files["file"];
+            if (file.ContentLength > 0)
+            {
+                String[] Temp = Path.GetFileName(file.FileName).Split('.');
+                String Extension = Temp[Temp.Length - 1];
+                String NombreArchivo = nuevacadena + "." + Extension;
+                IdFactura = Request.Form["Factura"];
+                String path = Server.MapPath("~/Acuse/" + NombreArchivo);
+                ObjetoAcuse Acu = new ObjetoAcuse();
+                Acu.IdFactura = IdFactura;
+                Acu.IdUsuario = IdUsuario;
+                Acu.Archivo = NombreArchivo;
+                if (Fac.SubirAcuse(Acu))
+                {
+                    file.SaveAs(path);
+                }
+                else
+                {
+                    Error = "Error ocurrido al procesar la petición";
+                }
+
+                Response.Write("<script language='javascript'> { alert('El acuse se cargo exitosamente'); window.location.href='BusquedaEspecifica?reload=1'; }</script>");
+            }
+            else
+            {
+                Response.Write("<script language='javascript'> { alert('Debe seleccionar al menos 1 archivo'); }</script>");
+            }
+        }
+        catch (Exception ex)
+        {
+            Error = ex.Message;
+            Response.Write("<script language='javascript'> { alert('El acuse no logro cargarse. Intente más tarde'); window.location.href='BusquedaEspecifica'; }</script>");
+        }
+
+    }
+
+    if (IsPost && Request["btnEliminar"] != null)
+    {
+        ObjetoAcuse acuse = new ObjetoAcuse();
+        acuse.IdFactura = Request.Form["FacturaNumero"];
+        acuse.NumeroString = Request.Form["Numero"];
+        acuse.IdUsuario = IdUsuario;
+
+        string error = Fac.EliminarAcuse(acuse);
+
+        if (string.IsNullOrEmpty(error))
+        {
+            Response.Write("<script language='javascript'> { alert('El acuse fue eliminado exitosamente'); window.location.href='BusquedaEspecifica?reload=1'; }</script>");
+        }
+        else
+        {
+            Response.Write("<script language='javascript'> { alert('El acuse no logro ser eliminado. Intente más tarde'); window.location.href='BusquedaEspecifica?reload=1'; }</script>");
+        }
+    }
+}
+
+<script src="~/Scripts/jquerymodal/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="~/Scripts/jquerymodal/jquery.modal.css" type="text/css" media="screen" />
+<script src="~/Scripts/bootstrap/bootstrap-filestyle.js"></script>
+<form method="post" enctype="multipart/form-data" class="login_form modal" role="form" id="modal-Subir" style="display:none;">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="label label-primary">Carga de Acuse</h3>
+            <div class="form-group  col-sm-12">
+                <label class="col-sm-2 control-label">Acuse</label>
+                <div class="col-sm-4">
+                    <input type="file" name="file" id="input12">
+                    <input type="hidden" name="Factura" id="Factura">
+                </div>
+            </div>
+            <div class="form-group  col-sm-12">
+                <input type="submit" name="btnSubir" value="Subir" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+    <a href=""></a>
+</form>
+
+<script type="text/javascript">
+
+			$('#input01').filestyle()
+			$('#input001').filestyle({
+				'placeholder' : 'Placeholder test'
+			});
+			$('#input02').filestyle({
+				buttonText : 'My filestyle'
+			});
+
+			$('#input03').filestyle({
+				input : false,
+				buttonName : 'btn-primary'
+			});
+
+			$('#input04').filestyle({
+				icon : false
+			});
+
+			$('#input05').filestyle({
+				buttonName : 'btn-warning'
+			});
+
+			$('#input07').filestyle({
+				iconName : 'glyphicon glyphicon-plus',
+				buttonText : 'Add'
+			});
+
+			$('#input08').filestyle({
+				buttonText : ' File',
+				buttonName : 'btn-success'
+			});
+
+			$('#clear').click(function() {
+				$('#input08').filestyle('clear');
+			});
+
+			$('#input09').filestyle({
+				buttonText : 'File',
+				buttonName : 'btn-primary'
+			});
+
+			$('#toggleInput').click(function() {
+				var fs = $('#input09');
+				if (fs.filestyle('input'))
+					fs.filestyle('input', false);
+				else
+					fs.filestyle('input', true);
+			});
+
+			$('#input10').filestyle({
+				buttonText : 'File',
+				buttonName : 'btn-primary'
+			});
+
+			$('#toggleIcon').click(function() {
+				var fs = $('#input10');
+				if (fs.filestyle('icon'))
+					fs.filestyle('icon', false);
+				else
+					fs.filestyle('icon', true);
+			});
+
+			$('#input11').filestyle({
+				buttonText : 'Multiple',
+				buttonName : 'btn-danger'
+			});
+
+			$('#input12').filestyle({
+			    iconName: 'fa fa-folder-open',
+				buttonText : ''
+			});
+
+			$('#input13').filestyle({
+				disabled : true
+			});
+
+			$('#input14').filestyle({
+				buttonBefore : true
+			});
+			$('#input15').filestyle({
+				size : 'lg'
+			});
+			$('#input15').filestyle({
+				input : false,
+				badge: false
+			});
+
+			// nultiple initialize
+			$('.test').filestyle({
+				buttonName : 'btn-primary'
+			});
+</script>
+
+<form method="post" enctype="multipart/form-data" class="login_form modal" role="form" id="modal-elimimar" style="display:none;">
+    <input type="hidden" name="Archivo" id="Archivo">
+    <input type="hidden" name="FacturaNumero" id="FacturaNumero">
+    <input type="hidden" name="Numero" id="Numero">
+    <button class="btn btn-primary btn-lg center-block" name="btnEliminar" value="Eliminar" id="btnEliminar">Eliminar</button>
+</form>

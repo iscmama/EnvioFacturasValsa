@@ -1,0 +1,106 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Facturas Fac = new Facturas();
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Eliminar Acuse";
+
+    String Error = "";
+
+
+    String IdUsuario = "";
+    String IdFactura = Request.QueryString["IdFactura"];
+    String Numero = Request.QueryString["Numero"];
+    String Archivo = Request.QueryString["Archivo"];
+    try
+    {
+        IdUsuario = (String)(Session["IdUsuario"].ToString());
+    }
+    catch
+    {
+        Response.Redirect("~/Default");
+    }
+
+    if (IsPost)
+    {
+        ObjetoAcuse ObjAcu = new ObjetoAcuse();
+        ObjAcu.IdFactura = Request.Form["Factura"];
+        ObjAcu.NumeroString = Request.Form["Numero"];
+        ObjAcu.Archivo = Request.Form["Archivo"];
+
+        Error = Fac.EliminarAcuse(ObjAcu);
+
+    }
+}
+
+@if (IdFactura.IsEmpty())
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>Ha ocurrido un error: </strong> No se encuentra el acuse a eliminar
+    </div>
+}
+else
+{
+    if (IsPost)
+    {
+        if (Error.Length == 0)
+        {
+            Response.Redirect("~/BusquedaEspecifica");
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form method="post" class="form-horizontal" role="form">
+                                <h3 class="label label-primary">Eliminar Acuse</h3>
+                                <div class="form-group  col-sm-12">
+                                    <center>¿Eliminar Acuse @Numero?</center>
+                                    <input type="hidden" name="Archivo" value="@Archivo">
+                                    <input type="hidden" name="Factura" value="@IdFactura">
+                                    <input type="hidden" name="Numero" value="@Numero">
+                                </div>
+                                <div class="form-group  col-sm-12">
+                                    <button class="btn btn-primary center-block">Eliminar</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-danger" role="alert">
+                <strong>Ha ocurrido un error: </strong> @Error
+            </div>
+        }
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form method="post" class="form-horizontal" role="form">
+                            <h3 class="label label-primary">Eliminar Acuse</h3>
+                            <div class="form-group  col-sm-12">
+                                <center>¿Eliminar Acuse @Numero?</center>
+                                <input type="hidden" name="Archivo" value="@Archivo">
+                                <input type="hidden" name="Factura" value="@IdFactura">
+                                <input type="hidden" name="Numero" value="@Numero">
+                            </div>
+                            <div class="form-group  col-sm-12">
+                                <button class="btn btn-primary center-block">Eliminar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+

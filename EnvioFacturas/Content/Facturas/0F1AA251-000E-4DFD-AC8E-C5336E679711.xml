@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="Tlalnepantla, Estado de Mexico" Moneda="USD" NumCtaPago="NO IDENTIFICADO" TipoCambio="18.471500" certificado="MIIEkDCCA3igAwIBAgIUMDAwMDEwMDAwMDAyMDEzNDQzODcwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxMzIwNDAwN1oXDTE2MDYxMzIwNDAwN1owgdExIzAhBgNVBAMTGlNBTkRWSUsgREUgTUVYSUNPIFNBIERFIENWMSMwIQYDVQQpExpTQU5EVklLIERFIE1FWElDTyBTQSBERSBDVjEjMCEGA1UEChMaU0FORFZJSyBERSBNRVhJQ08gU0EgREUgQ1YxJTAjBgNVBC0THFNNRTYxMDMxN1RHNiAvIExFTEc3MjA4MjE3RTExHjAcBgNVBAUTFSAvIExFTEc3MjA4MjFITkVEUlMwMjEZMBcGA1UECxMQRVNUQURPIERFIE1FWElDTzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAstNRY9sxbP7qtyArGGNZaxtaVA13Mr9QMJEj5o1yEhCV8kZ+ZgqB8QnOxIdYnUx9UDPd3UBiWHN2qGY/MERv84Rhaqoh3GO6cnT4Eelsz/XowlOhPqVCx319PXGYZPIT5xEQ/tc6I+HerNGzY/TttR/3rnliPZKH/f3LRCuYDr0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAJJLlDYcaj22H+Ricte2F8rf2kTMD7MG2TZGgagoOEdEkOaFMfJizLoQlFGyESwMrtGAfBQQRH6yITkexxbApfYAy1ioN/wsb/KEZQt30VC/R8Zs4IhCF/845Fe/rcoBqoZRYdk+0Roe8gK8Rtph7g31TbKLRnUAUroMlI0beZaV7gm2cCgaAmeY/vMkGFF7GaG31t3f8fVzegqI54Hc35wjCB3jQPSIiBKD815bad18737dvl9OKuDCaWff5K1nNory717zQn9Co1VRd3rgNJhaqnxogdsMN9tUuQrbBa9R+aNbHIO2NGNTK8GmRXlpQo8t8cn4+2U/CwbDiKSr/RE=" condicionesDePago="60 DIAS NETO" descuento="0.00" fecha="2016-01-27T14:30:41" folio="24043" formaDePago="Pago en una Sola Exhibicion" metodoDePago="CHECK" noCertificado="00001000000201344387" sello="fygD2mCKZmgqr7SboLYxgKfSviUctbH/k3niCRYBIzksGqEQY6ZPaBv20uGXmqXWWhpO5hMQnXotsZGIaj+xlFB3OijPcXbYuQRWGaMP85jhT2J/QN7SFm8OeUt2zQBjOIO/2lQL38fEar1h+Osha53A5w4AMHvU7cxmFMg028c=" serie="K" subTotal="-13127.20" tipoDeComprobante="egreso" total="15227.55" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd">
+   <cfdi:Emisor nombre="SANDVIK DE MEXICO, S.A. DE C.V." rfc="SME610317TG6">
+      <cfdi:DomicilioFiscal calle="VIA GUSTAVO BAZ" codigoPostal="54060" colonia="LA LOMA" estado="ESTADO DE MEXICO" municipio="TLALNEPANTLA" noExterior="352" pais="MÉXICO"/>
+      <cfdi:RegimenFiscal Regimen="Regimen General de Ley"/>
+   </cfdi:Emisor>
+   <cfdi:Receptor nombre="TUBOS Y BARRAS HUECAS SA DE CV" rfc="TBH831114JT7">
+      <cfdi:Domicilio calle="TUBOS Y BARRAS HUECAS, S.A. DE C.V." estado="MEXICO" municipio="FRACC. IND. SAN NICOLAS" pais="MEXICO"/>
+   </cfdi:Receptor>
+   <cfdi:Conceptos>
+      <cfdi:Concepto cantidad="-590.830" descripcion="TP 304L SANMAC 36 X 20MM HB" importe="-1742.94" noIdentificacion="E304L36X20MM" unidad="LB" valorUnitario="2.95"/>
+      <cfdi:Concepto cantidad="-2828.490" descripcion="TP304L 40 X 25 MM ID HB" importe="-8344.04" noIdentificacion="E304L40X25HB" unidad="LB" valorUnitario="2.95"/>
+      <cfdi:Concepto cantidad="-473.980" descripcion="TP 304L SANMAC 80 X 63MM HB" importe="-1289.22" noIdentificacion="E304L80X63MM" unidad="LB" valorUnitario="2.72"/>
+      <cfdi:Concepto cantidad="-643.740" descripcion="TP 304L SANMAC 112 X 90MM HB" importe="-1750.97" noIdentificacion="E304L112X90MM" unidad="LB" valorUnitario="2.72"/>
+   </cfdi:Conceptos>
+   <cfdi:Impuestos>
+      <cfdi:Traslados>
+         <cfdi:Traslado importe="-2100.35" impuesto="IVA" tasa="0.1600"/>
+      </cfdi:Traslados>
+   </cfdi:Impuestos>
+   <cfdi:Complemento>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2016-01-27T14:30:49" UUID="0F1AA251-000E-4DFD-AC8E-C5336E679711" noCertificadoSAT="00001000000203631919" selloCFD="fygD2mCKZmgqr7SboLYxgKfSviUctbH/k3niCRYBIzksGqEQY6ZPaBv20uGXmqXWWhpO5hMQnXotsZGIaj+xlFB3OijPcXbYuQRWGaMP85jhT2J/QN7SFm8OeUt2zQBjOIO/2lQL38fEar1h+Osha53A5w4AMHvU7cxmFMg028c=" selloSAT="L+mukN1emuLRGFJLFkHhiiF32x+APlhQFv7ybWMl+r8Utxe3Z0HipWAfl6YCRilqxGuXHak5lOqGa50qxcyiPJr/vJSpIfOv1M/NHdkO+dr4ZSm5jmhSX9kEe7kRjEMIvgRBZTbB1CMN1MnVuhfND37PzV9ZDvf9cWvM8vfS9/I=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+</cfdi:Complemento>
+<cfdi:Addenda>
+      <requestForPayment DeliveryDate="2016-01-27" contentVersion="1.3.1" documentStatus="ORIGINAL" documentStructureVersion="AMC7.1" type="SimpleInvoiceType">
+         <requestForPaymentIdentification>
+            <entityType>CREDIT_NOTE</entityType>
+            <uniqueCreatorIdentification>K24043-160127143041</uniqueCreatorIdentification>
+         </requestForPaymentIdentification>
+         <specialInstruction code="AAB">
+            <text>60 DIAS NETO</text>
+         </specialInstruction>
+         <specialInstruction code="ZZZ">
+            <text>( QUINCE MIL DOSCIENTOS VEINTISIETE DÓLARES Y CINCUENTA Y CINCO CENTAVOS USD )</text>
+         </specialInstruction>
+         <specialInstruction code="LGT">
+            <text>K</text>
+         </specialInstruction>
+         <specialInstruction code="REG">
+            <text>Regimen General de Ley</text>
+         </specialInstruction>
+         <orderIdentification>
+            <referenceIdentification type="ON">OC8440</referenceIdentification>
+         </orderIdentification>
+         <AdditionalInformation>
+            <referenceIdentification type="ACE">314025</referenceIdentification>
+            <referenceIdentification type="INT">314025</referenceIdentification>
+            <referenceIdentification type="IV">K24043</referenceIdentification>
+         </AdditionalInformation>
+         <buyer>
+            <gln>0000000000000</gln>
+         </buyer>
+         <currency currencyISOCode="USD">
+            <currencyFunction>BILLING_CURRENCY</currencyFunction>
+            <rateOfChange>18.4715000</rateOfChange>
+         </currency>
+         <lineItem number="1" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E304L36X20MM</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 304L SANMAC 36 X 20MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">-590.830</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E304L36X20MM</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>2.95</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC8440</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>-1742.94</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>-1742.94</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="3" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E304L40X25HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP304L 40 X 25 MM ID HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">-2828.490</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E304L40X25HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>2.95</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC8440</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>-8344.04</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>-8344.04</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="5" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E304L80X63MM</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 304L SANMAC 80 X 63MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">-473.980</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E304L80X63MM</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>2.72</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC8440</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>-1289.22</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>-1289.22</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="7" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E304L112X90MM</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 304L SANMAC 112 X 90MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">-643.740</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E304L112X90MM</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>2.72</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC8440</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>-1750.97</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>-1750.97</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <totalAmount>
+            <Amount>-13127.20</Amount>
+         </totalAmount>
+         <TotalAllowanceCharge allowanceOrChargeType="CHARGE">
+            <Amount>0.00</Amount>
+         </TotalAllowanceCharge>
+         <baseAmount>
+            <Amount>-13127.20</Amount>
+         </baseAmount>
+         <taxAmount>
+            <Amount>-2100.35</Amount>
+         </taxAmount>
+         <tax type="VAT">
+            <taxPercentage>0.1600</taxPercentage>
+            <taxAmount>-2100.35</taxAmount>
+            <taxCategory>TRANSFERIDO</taxCategory>
+         </tax>
+         <payableAmount>
+            <Amount>15227.55</Amount>
+         </payableAmount>
+      </requestForPayment>
+   </cfdi:Addenda>
+</cfdi:Comprobante>

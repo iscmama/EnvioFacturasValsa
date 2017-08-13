@@ -1,0 +1,96 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = " Configuración de Cuenta";
+
+    String Informacion = "";
+    String IdUsuario = (String)(Session["IdUsuario"].ToString());
+    String ContraseñaActual = "";
+    String NuevaContraseña = "";
+    
+    if (IsPost)
+    {
+        MiCuenta MiCue = new MiCuenta();
+
+        List<String> DatosEnviar = new List<String>();
+
+        DatosEnviar.Add(IdUsuario);
+        DatosEnviar.Add(Request.Form["ContraseñaActual"]);
+        DatosEnviar.Add(Request.Form["Contraseña"]);
+
+        ContraseñaActual = Request.Form["ContraseñaActual"];
+        NuevaContraseña = Request.Form["Contraseña"];
+        String ConfirmarContraseña = Request.Form["ConfirmarContraseña"];
+        
+        if(NuevaContraseña.Equals(ConfirmarContraseña))
+        {
+            //Si todo cuadra, modifico
+            Informacion = MiCue.ModificarContraseña(DatosEnviar);
+            if(Informacion.Length == 0)
+            {
+                ContraseñaActual = "";
+                NuevaContraseña = "";
+                ConfirmarContraseña = "";
+                Informacion = "Información modificada con éxito";
+            }
+        }
+        else
+        {
+            Informacion = "Contraseñas no coinciden";
+        }
+    }
+
+    
+}
+
+<div class="page-header"><h1>Mi Cuenta <small>Modificación de contraseña</small></h1></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Modificar Contraseña</div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" method="post">
+                    <h3 class="label label-primary">Información Actual</h3>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Contraseña Actual</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" name="ContraseñaActual" placeholder="Contraseña Actual" value="@ContraseñaActual" required>
+                        </div>
+                    </div>
+                    <hr class="dotted">
+                    <h3 class="label label-success">Nueva Información</h3>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Nueva Contraseña</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" name="Contraseña" placeholder="Nueva Contraseña" value="@NuevaContraseña" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Confirmar Contraseña</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" name="ConfirmarContraseña" placeholder="Confirmar Contraseña" required>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg center-block">Modificar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    @if (Informacion.Length != 0)
+    {
+        if (Informacion.Equals("Información modificada con éxito"))
+        {
+            <center style="color: green;">@Informacion</center>
+        }
+        else
+        {
+            <center style="color: red;">@Informacion</center>   
+        }
+    }
+</div>

@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LugarExpedicion="Tlalnepantla, Estado de Mexico" Moneda="USD" NumCtaPago="NO IDENTIFICADO" TipoCambio="17.926000" certificado="MIIEkDCCA3igAwIBAgIUMDAwMDEwMDAwMDAyMDEzNDQzODcwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMDYxMzIwNDAwN1oXDTE2MDYxMzIwNDAwN1owgdExIzAhBgNVBAMTGlNBTkRWSUsgREUgTUVYSUNPIFNBIERFIENWMSMwIQYDVQQpExpTQU5EVklLIERFIE1FWElDTyBTQSBERSBDVjEjMCEGA1UEChMaU0FORFZJSyBERSBNRVhJQ08gU0EgREUgQ1YxJTAjBgNVBC0THFNNRTYxMDMxN1RHNiAvIExFTEc3MjA4MjE3RTExHjAcBgNVBAUTFSAvIExFTEc3MjA4MjFITkVEUlMwMjEZMBcGA1UECxMQRVNUQURPIERFIE1FWElDTzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAstNRY9sxbP7qtyArGGNZaxtaVA13Mr9QMJEj5o1yEhCV8kZ+ZgqB8QnOxIdYnUx9UDPd3UBiWHN2qGY/MERv84Rhaqoh3GO6cnT4Eelsz/XowlOhPqVCx319PXGYZPIT5xEQ/tc6I+HerNGzY/TttR/3rnliPZKH/f3LRCuYDr0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAJJLlDYcaj22H+Ricte2F8rf2kTMD7MG2TZGgagoOEdEkOaFMfJizLoQlFGyESwMrtGAfBQQRH6yITkexxbApfYAy1ioN/wsb/KEZQt30VC/R8Zs4IhCF/845Fe/rcoBqoZRYdk+0Roe8gK8Rtph7g31TbKLRnUAUroMlI0beZaV7gm2cCgaAmeY/vMkGFF7GaG31t3f8fVzegqI54Hc35wjCB3jQPSIiBKD815bad18737dvl9OKuDCaWff5K1nNory717zQn9Co1VRd3rgNJhaqnxogdsMN9tUuQrbBa9R+aNbHIO2NGNTK8GmRXlpQo8t8cn4+2U/CwbDiKSr/RE=" condicionesDePago="60 DIAS NETO" descuento="0.00" fecha="2016-03-16T11:39:21" folio="240320" formaDePago="Pago en una Sola Exhibicion" metodoDePago="CHECK" noCertificado="00001000000201344387" sello="ATR06GL1tbfU09MYzFGA1i382KOPBVd6EZHRXTMmYShboqKPEoPTdFa/9UF1uF5s3mdXnPmq+sFyaszQDojxCUHsPe+97Z5QBe71nO5Z4jj5LjS4ghEebbqZG/qQGcHKKmt7nh4jF2+91i4TzJ1qfaCkrJMWy4uBXYgt4VFviSY=" serie="J" subTotal="102803.04" tipoDeComprobante="ingreso" total="119251.53" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd">
+   <cfdi:Emisor nombre="SANDVIK DE MEXICO, S.A. DE C.V." rfc="SME610317TG6">
+      <cfdi:DomicilioFiscal calle="VIA GUSTAVO BAZ" codigoPostal="54060" colonia="LA LOMA" estado="ESTADO DE MEXICO" municipio="TLALNEPANTLA" noExterior="352" pais="MÉXICO"/>
+      <cfdi:RegimenFiscal Regimen="Regimen General de Ley"/>
+   </cfdi:Emisor>
+   <cfdi:Receptor nombre="TUBOS Y BARRAS HUECAS SA DE CV" rfc="TBH831114JT7">
+      <cfdi:Domicilio calle="TUBOS Y BARRAS HUECAS, S.A. DE C.V." estado="MEXICO" municipio="FRACC. IND. SAN NICOLAS" pais="MEXICO"/>
+   </cfdi:Receptor>
+   <cfdi:Conceptos>
+      <cfdi:Concepto cantidad="46.830" descripcion="TP 316L SANMAC 45 X 32 HB" importe="644.84" noIdentificacion="E316L45X32HB" unidad="LB" valorUnitario="13.77"/>
+      <cfdi:Concepto cantidad="44.060" descripcion="TP 316L SANMAC 56 X 40 HB" importe="923.54" noIdentificacion="E316L56X40HB" unidad="LB" valorUnitario="20.96"/>
+      <cfdi:Concepto cantidad="39.000" descripcion="TP 316L SANMAC 80 X 45 MM HB" importe="2269.84" noIdentificacion="E316L80X45HB" unidad="LB" valorUnitario="58.20"/>
+      <cfdi:Concepto cantidad="36.250" descripcion="TP 316L SANMAC 80 x 50 MM HB" importe="1885.72" noIdentificacion="E316L80X50HB" unidad="LB" valorUnitario="52.02"/>
+      <cfdi:Concepto cantidad="32.780" descripcion="TP 316/316L 90 X 63 MM" importe="1826.58" noIdentificacion="E316L90X63HB" unidad="LB" valorUnitario="55.72"/>
+      <cfdi:Concepto cantidad="95.370" descripcion="TP 316L SANMAC 90 x 71 MM HB" importe="4038.95" noIdentificacion="E316L90X71HB" unidad="LB" valorUnitario="42.35"/>
+      <cfdi:Concepto cantidad="91.250" descripcion="TP 316L SANMAC 95 x 50 MM HB" importe="7899.27" noIdentificacion="E316L95X50HB" unidad="LB" valorUnitario="86.57"/>
+      <cfdi:Concepto cantidad="33.830" descripcion="TP 316L SANMAC 95 x 67 MM HB" importe="2079.71" noIdentificacion="E316L95X67HB" unidad="LB" valorUnitario="61.48"/>
+      <cfdi:Concepto cantidad="98.000" descripcion="TP 316L SANMAC 100 x 71 MM HB" importe="6588.36" noIdentificacion="E316L100X71HB" unidad="LB" valorUnitario="67.23"/>
+      <cfdi:Concepto cantidad="71.350" descripcion="TP 316L SANMAC 100 x 80 MM HB" importe="3580.62" noIdentificacion="E316L100X80HB" unidad="LB" valorUnitario="50.18"/>
+      <cfdi:Concepto cantidad="17.550" descripcion="TP 316L SANMAC 106 X 71 MM HB" importe="1465.01" noIdentificacion="E316L106X71HB" unidad="LB" valorUnitario="83.48"/>
+      <cfdi:Concepto cantidad="111.880" descripcion="TP 316L SANMAC 106 x 80 MM HB" importe="7432.47" noIdentificacion="E316L106X80HB" unidad="LB" valorUnitario="66.43"/>
+      <cfdi:Concepto cantidad="47.240" descripcion="TP 316L SANMAC 112 x 63 MM HB" importe="5371.63" noIdentificacion="E316L112X63HB" unidad="LB" valorUnitario="113.71"/>
+      <cfdi:Concepto cantidad="29.170" descripcion="TP 316L SANMAC 112 x 71 MM HB" importe="2926.84" noIdentificacion="E316L112X71HB" unidad="LB" valorUnitario="100.34"/>
+      <cfdi:Concepto cantidad="42.270" descripcion="TP 316L SANMAC 118 x 80 MM HB" importe="4294.29" noIdentificacion="E316L118X80HB" unidad="LB" valorUnitario="101.59"/>
+      <cfdi:Concepto cantidad="17.060" descripcion="TP 316L SANMAC 125 x 80 MM HB" importe="2111.62" noIdentificacion="E316L125X80HB" unidad="LB" valorUnitario="123.78"/>
+      <cfdi:Concepto cantidad="77.490" descripcion="TP 316L SANMAC 125 x 90 MM HB" importe="8000.41" noIdentificacion="E316L125X90HB" unidad="LB" valorUnitario="103.24"/>
+      <cfdi:Concepto cantidad="61.350" descripcion="TP 316L SANMAC 132 x 90 MM HB" importe="7706.35" noIdentificacion="E316L132X90HB" unidad="LB" valorUnitario="125.61"/>
+      <cfdi:Concepto cantidad="19.300" descripcion="TP 316L SANMAC 132 X 106 MM HB" importe="1666.61" noIdentificacion="E316L132X106HB" unidad="LB" valorUnitario="86.35"/>
+      <cfdi:Concepto cantidad="55.640" descripcion="TP 316L SANMAC 140 X 80 MM HB" importe="9747.30" noIdentificacion="E316L140X80HB" unidad="LB" valorUnitario="175.19"/>
+      <cfdi:Concepto cantidad="12.920" descripcion="TP 316L SANMAC 140 X 112 MM HB" importe="1269.87" noIdentificacion="E316L140X112HB" unidad="LB" valorUnitario="98.29"/>
+      <cfdi:Concepto cantidad="22.080" descripcion="TP 316L SANMAC 150 x 95 MM HB" importe="3981.59" noIdentificacion="E316L150X95HB" unidad="LB" valorUnitario="180.33"/>
+      <cfdi:Concepto cantidad="21.290" descripcion="TP 316L SANMAC 160 X 132MM HB" importe="2460.61" noIdentificacion="E316L160X132HB" unidad="LB" valorUnitario="115.58"/>
+      <cfdi:Concepto cantidad="20.360" descripcion="TP 316L SANMAC 200 X 160 MM HB" importe="4086.35" noIdentificacion="E316L200X160HB" unidad="LB" valorUnitario="200.71"/>
+      <cfdi:Concepto cantidad="20.800" descripcion="TP 316L SANMAC 200 X 170MM HB" importe="3319.24" noIdentificacion="E316L200X170HB" unidad="LB" valorUnitario="159.58"/>
+      <cfdi:Concepto cantidad="17.170" descripcion="TP 316L SANMAC 212 X 150 MM HB" importe="5225.64" noIdentificacion="E316L212X150HB" unidad="LB" valorUnitario="304.35"/>
+   </cfdi:Conceptos>
+   <cfdi:Impuestos>
+      <cfdi:Traslados>
+         <cfdi:Traslado importe="16448.49" impuesto="IVA" tasa="0.1600"/>
+      </cfdi:Traslados>
+   </cfdi:Impuestos>
+   <cfdi:Complemento>
+<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" FechaTimbrado="2016-03-16T13:04:36" UUID="78D97EA5-B099-4F26-9DC7-4A72A4A1F1DC" noCertificadoSAT="00001000000203631919" selloCFD="ATR06GL1tbfU09MYzFGA1i382KOPBVd6EZHRXTMmYShboqKPEoPTdFa/9UF1uF5s3mdXnPmq+sFyaszQDojxCUHsPe+97Z5QBe71nO5Z4jj5LjS4ghEebbqZG/qQGcHKKmt7nh4jF2+91i4TzJ1qfaCkrJMWy4uBXYgt4VFviSY=" selloSAT="Gi3NL/BCs/wq9Ef8mQZft8nP5/znBHzCIgrNxmbZkVkDHbgXyOf9WHyikhpcpefgvIYErCGIhAAG1g9iU/qt2kVcIrwmWlmE0rTI+OFVJcVCCWTcQRlm1+RsUdZsIBVnh1mloRjC10+cKGHUqjWQ1ZT4K5K+e0Euq/uFI1I8xa4=" version="1.0" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+</cfdi:Complemento>
+<cfdi:Addenda>
+      <requestForPayment DeliveryDate="2016-03-16" contentVersion="1.3.1" documentStatus="ORIGINAL" documentStructureVersion="AMC7.1" type="SimpleInvoiceType">
+         <requestForPaymentIdentification>
+            <entityType>INVOICE</entityType>
+            <uniqueCreatorIdentification>J240320-160316113921</uniqueCreatorIdentification>
+         </requestForPaymentIdentification>
+         <specialInstruction code="AAB">
+            <text>60 DIAS NETO</text>
+         </specialInstruction>
+         <specialInstruction code="ZZZ">
+            <text>( CIENTO DIECINUEVE MIL DOSCIENTOS CINCUENTA Y UN DÓLARES Y CINCUENTA Y TRES CENTAVOS USD )</text>
+         </specialInstruction>
+         <specialInstruction code="LGT">
+            <text>J</text>
+         </specialInstruction>
+         <specialInstruction code="REG">
+            <text>Regimen General de Ley</text>
+         </specialInstruction>
+         <orderIdentification>
+            <referenceIdentification type="ON">OC08633</referenceIdentification>
+         </orderIdentification>
+         <AdditionalInformation>
+            <referenceIdentification type="ACE">313760</referenceIdentification>
+            <referenceIdentification type="INT">313760</referenceIdentification>
+            <referenceIdentification type="IV">J240320</referenceIdentification>
+         </AdditionalInformation>
+         <buyer>
+            <gln>0000000000000</gln>
+         </buyer>
+         <currency currencyISOCode="USD">
+            <currencyFunction>BILLING_CURRENCY</currencyFunction>
+            <rateOfChange>17.9260000</rateOfChange>
+         </currency>
+         <lineItem number="1" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L45X32HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 45 X 32 HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">46.830</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L45X32HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>13.77</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>644.84</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>644.84</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="3" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L56X40HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 56 X 40 HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">44.060</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L56X40HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>20.96</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>923.54</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>923.54</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="5" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L80X45HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 80 X 45 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">39.000</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L80X45HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>58.20</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2269.84</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2269.84</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="7" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L80X50HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 80 x 50 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">36.250</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L80X50HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>52.02</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1885.72</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1885.72</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="9" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L90X63HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316/316L 90 X 63 MM</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">32.780</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L90X63HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>55.72</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1826.58</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1826.58</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="11" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L90X71HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 90 x 71 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">95.370</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L90X71HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>42.35</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>4038.95</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>4038.95</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="13" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L95X50HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 95 x 50 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">91.250</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L95X50HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>86.57</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>7899.27</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>7899.27</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="15" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L95X67HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 95 x 67 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">33.830</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L95X67HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>61.48</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2079.71</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2079.71</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="17" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L100X71HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 100 x 71 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">98.000</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L100X71HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>67.23</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>6588.36</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>6588.36</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="19" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L100X80HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 100 x 80 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">71.350</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L100X80HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>50.18</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>3580.62</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>3580.62</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="21" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L106X71HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 106 X 71 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">17.550</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L106X71HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>83.48</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1465.01</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1465.01</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="23" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L106X80HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 106 x 80 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">111.880</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L106X80HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>66.43</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>7432.47</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>7432.47</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="25" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L112X63HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 112 x 63 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">47.240</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L112X63HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>113.71</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>5371.63</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>5371.63</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="27" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L112X71HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 112 x 71 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">29.170</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L112X71HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>100.34</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2926.84</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2926.84</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="29" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L118X80HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 118 x 80 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">42.270</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L118X80HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>101.59</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>4294.29</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>4294.29</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="31" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L125X80HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 125 x 80 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">17.060</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L125X80HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>123.78</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2111.62</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2111.62</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="33" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L125X90HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 125 x 90 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">77.490</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L125X90HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>103.24</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>8000.41</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>8000.41</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="35" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L132X90HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 132 x 90 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">61.350</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L132X90HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>125.61</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>7706.35</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>7706.35</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="37" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L132X106HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 132 X 106 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">19.300</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L132X106HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>86.35</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1666.61</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1666.61</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="39" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L140X80HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 140 X 80 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">55.640</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L140X80HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>175.19</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>9747.30</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>9747.30</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="41" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L140X112HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 140 X 112 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">12.920</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L140X112HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>98.29</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>1269.87</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>1269.87</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="43" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L150X95HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 150 x 95 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">22.080</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L150X95HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>180.33</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>3981.59</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>3981.59</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="45" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L160X132HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 160 X 132MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">21.290</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L160X132HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>115.58</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>2460.61</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>2460.61</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="47" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L200X160HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 200 X 160 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">20.360</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L200X160HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>200.71</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>4086.35</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>4086.35</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="49" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L200X170HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 200 X 170MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">20.800</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L200X170HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>159.58</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>3319.24</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>3319.24</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <lineItem number="51" type="SimpleInvoiceLineItemType">
+            <tradeItemIdentification>
+               <gtin>0</gtin>
+            </tradeItemIdentification>
+            <alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">E316L212X150HB</alternateTradeItemIdentification>
+            <tradeItemDescriptionInformation>
+               <longText>TP 316L SANMAC 212 X 150 MM HB</longText>
+            </tradeItemDescriptionInformation>
+            <invoicedQuantity unitOfMeasure="EA">17.170</invoicedQuantity>
+            <specialInstruction code="DES">
+               <text>E316L212X150HB</text>
+            </specialInstruction>
+            <netPrice>
+               <Amount>304.35</Amount>
+            </netPrice>
+            <AdditionalInformation>
+               <referenceIdentification type="ON">OC08633</referenceIdentification>
+            </AdditionalInformation>
+            <totalLineAmount>
+               <grossAmount>
+                  <Amount>5225.64</Amount>
+               </grossAmount>
+               <netAmount>
+                  <Amount>5225.64</Amount>
+               </netAmount>
+            </totalLineAmount>
+         </lineItem>
+         <totalAmount>
+            <Amount>102803.04</Amount>
+         </totalAmount>
+         <TotalAllowanceCharge allowanceOrChargeType="CHARGE">
+            <Amount>0.00</Amount>
+         </TotalAllowanceCharge>
+         <baseAmount>
+            <Amount>102803.04</Amount>
+         </baseAmount>
+         <taxAmount>
+            <Amount>16448.49</Amount>
+         </taxAmount>
+         <tax type="VAT">
+            <taxPercentage>0.1600</taxPercentage>
+            <taxAmount>16448.49</taxAmount>
+            <taxCategory>TRANSFERIDO</taxCategory>
+         </tax>
+         <payableAmount>
+            <Amount>119251.53</Amount>
+         </payableAmount>
+      </requestForPayment>
+   </cfdi:Addenda>
+</cfdi:Comprobante>

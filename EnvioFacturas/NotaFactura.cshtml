@@ -1,0 +1,66 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+    
+    //Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Nota";
+
+    String IdFactura = "";
+
+    Facturas Fac = new Facturas();
+
+    if (IsPost)
+    {
+        IdFactura = Request.Form["IdFactura"];
+        
+        
+        //Actualizamos esta madre
+        String Mandar = Request.Form["Nota"];
+        Fac.ActualizarNota(Mandar, IdFactura);
+    }
+    else
+    {
+        IdFactura = Request.QueryString["IdFactura"];
+    }
+
+    
+    
+
+    String Nota = Fac.ObtenerNota(IdFactura);
+	
+	if(IsPost)
+	{
+		<script>
+		self.parent.tb_remove(); parent.location.reload(1);
+		</script>
+	}
+
+}
+
+<link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="~/Content/app/general.css" />
+<link rel="stylesheet" href="~/Content/app/thickbox.css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300' rel='stylesheet' type='text/css'>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" method="post">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">Nota</label>
+                        <div class="col-sm-11">
+                            <textarea rows="4" cols="100%" class="form-control" name="Nota" placeholder="Nota" >@Nota</textarea>
+                            <input type="hidden" name="IdFactura" value="@IdFactura" />
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-lg center-block">Actualizar Nota</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

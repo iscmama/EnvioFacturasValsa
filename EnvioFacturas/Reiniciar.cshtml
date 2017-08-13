@@ -1,0 +1,35 @@
+﻿@{
+    if (Session["IdUsuario"] == null)
+    {
+        Response.Redirect("~/Default");
+    }
+
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Reinciar Proceso";
+
+    if (IsPost)
+    {
+        //Reiniciamos
+        Reiniciar Re = new Reiniciar();
+        String Error = Re.Reinicia();
+
+        if (Error.Length != 0)
+        {
+            <div class="alert alert-danger" role="alert">
+                <strong>Ha ocurrido un error :(</strong> @Error
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-success" role="alert">
+                <strong>Acción finalizada con éxito</strong> Ahora puede cerrar esta ventana
+            </div>
+        }
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            <strong>Ha ocurrido un error :(</strong> No se puede llevar a cabo la operación
+        </div>
+    }
+}

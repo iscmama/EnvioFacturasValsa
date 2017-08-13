@@ -1,0 +1,62 @@
+﻿@{
+    //Obtengo datos post
+    String Inicio = "";
+    String Fin = "";
+    String Serie = "";
+    String Folio = "";
+    String TipoComprobante = "0";
+    String Receptor = "0";
+    String IdUsuario = "";
+    String Pais = "";
+    String Status = "";
+
+    try
+    {
+        IdUsuario = (String)(Session["IdUsuario"].ToString());
+    }
+    catch
+    {
+        Response.Redirect("~/Default");
+    }
+
+    if (IsPost)
+    {
+        try
+        {
+            Serie = Request.Form["Serie"];
+            Folio = Request.Form["Folio"];
+            Inicio = Request.Form["Desde"];
+            Fin = Request.Form["Hasta"];
+            TipoComprobante = Request.Form["TipoComprobante"];
+            Receptor = Request.Form["Receptor"];
+            Pais = Request.Form["Pais"];
+            Status = Request.Form["Status"];
+
+            List<String> DatosEnviar = new List<String>();
+            DatosEnviar.Add(Serie);
+            DatosEnviar.Add(Folio);
+            DatosEnviar.Add(TipoComprobante);
+            DatosEnviar.Add(Inicio.Replace("-", ""));
+            DatosEnviar.Add(Fin.Replace("-", ""));
+            DatosEnviar.Add(Receptor);
+            DatosEnviar.Add(Status);
+            DatosEnviar.Add(Pais);
+
+            CrearExcel CreExc = new CrearExcel();
+            String NombreExcel = CreExc.CrearArchivo(DatosEnviar, IdUsuario);
+
+            if (NombreExcel.Split(',')[0] == "1")
+            {
+                Response.Redirect(@"~\Excel\" + NombreExcel.Split(',')[1] + ".csv");
+            }
+        }
+        catch
+        {
+            
+        }
+    }
+    else
+    {
+        
+    }
+}

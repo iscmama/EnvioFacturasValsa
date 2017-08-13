@@ -1,0 +1,103 @@
+﻿@{
+    if(Session["IdUsuario"] != null)
+    {
+        Response.Redirect("~/BusquedaEspecifica");
+    }
+    
+    Boolean YaInicio = false;
+    String Error = "";
+    String Usuario = "";
+    String Contraseña = "";
+    Session.Clear();
+    if(IsPost)
+    {
+        Error = "";
+        Usuario = Request.Form["Usuario"];
+        Contraseña = Request.Form["Contraseña"];
+        
+        IniciarSesion IniSes = new IniciarSesion();
+        List<int> Lista = IniSes.Iniciar(Usuario, Contraseña);
+        
+        if(Lista == null)
+        {
+            Lista = new List<int>();
+        }
+        
+        if(Lista.Count != 0)
+        {
+            Session.Add("IdUsuario", Lista[0]);
+            Session.Add("Administrador", Lista[1]);
+            Session.Add("Master", Lista[2]);
+            YaInicio = true;
+        }
+        else
+        {
+            Error = "Nombre de Usuario y/o Contraseña Incorrectos";
+        }
+    }
+    
+    if(!YaInicio)
+    {
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Iniciar sesión - CONSORCIO INDUSTRIAL VALSA, S.A. DE C.V.</title>
+            <script src="~/Scripts/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+            <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css" />
+            <link rel="stylesheet" href="~/Content/app/general.css" />
+            <link rel="stylesheet" href="~/Content/app/login.css" />
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+              <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        </head>
+        <body>
+
+            <div class="container">
+                <img src="~/Images/bg/login.jpg" class="login-background">
+                <div class="row">
+                    <img src="~/Images/logo-white-login2.png" class="img-responsive center-block login-logo">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                        <div class="login-panel">
+                            <h3 class="text-center" style="color: #000000 !important;">CONSORCIO INDUSTRIAL VALSA</h3>
+                            <p class="text-center" style="color: #000000 !important;">Iniciar sesión</p>
+                            <hr class="clean">
+                            <form role="form" method="POST">
+                                <div class="form-group input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Usuario" name="Usuario" value="@Usuario">
+                                </div>
+                                <div class="form-group input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                    <input type="password" class="form-control" placeholder="Contraseña" name="Contraseña" value="@Contraseña">
+                                </div>
+                                <button type="submit" class="btn btn-blue btn-block">Iniciar Sesión</button>
+                            </form>
+                            <hr>
+                            @if (Error.Length != 0)
+                            {
+                                <p class="text-center" style="color: #000000 !important;">@Error</p>
+                            }
+                            <!--
+                            <button type="submit" class="btn btn-default btn-block">Recuperar contraseña</button>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+            <script src="~/Scripts/app/custom.js" type="text/javascript"></script>
+        </body>
+        </html>
+    }
+    else
+    {
+        Response.Redirect("~/BusquedaEspecifica");
+    }
+}
